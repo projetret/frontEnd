@@ -1,21 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from "./shared/shared.module";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AppComponent } from './app.component';
-import { ContentLayoutComponent } from "./layouts/content/content-layout.component";
-import { FullLayoutComponent } from "./layouts/full/full-layout.component";
 import { AuthModule } from "./auth/auth.module";
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+import { AppComponent } from './app.component';
+import { ContentLayoutComponent } from "./layouts/content/content-layout.component";
+import { FullLayoutComponent } from "./layouts/full/full-layout.component";
+
 import { AuthService } from './auth/auth.service';
 import { UserService } from './auth/user.service';
 import { AuthGuard } from './auth/auth.guard';
-import * as $ from 'jquery'; 
+
+import * as $ from 'jquery';
 export const createTranslateLoader = (http: HttpClient) => {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 };

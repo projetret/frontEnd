@@ -1,0 +1,597 @@
+<div class="container-fluid">
+    <div id="ui-view">
+        <div>
+            <div class="animated fadeIn">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Company</strong>
+                                <small> Details</small>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="company">Company</label>
+                                    <input type="text" class="form-control" id="company" placeholder="Enter your company name" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vat">VAT</label>
+                                    <input type="text" class="form-control" id="vat" placeholder="PL1234567890" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="street">Street</label>
+                                    <input type="text" class="form-control" id="street" placeholder="Enter street name">
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-8">
+                                        <label for="city">City</label>
+                                        <input type="text" class="form-control" id="city" placeholder="Enter your city">
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <label for="postal-code">Postal Code</label>
+                                        <input type="text" class="form-control" id="postal-code" placeholder="Postal Code">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <input type="text" class="form-control" id="country" placeholder="Country name">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Additional</strong>
+                                <small> Informations</small>
+                            </div>
+                            <div class="card-body">
+
+                                <div class="form-group">
+                                    <label for="Full_name_legacy">Full name of legal entity</label>
+                                    <input type="text" class="form-control" id="Full_name_legacy" placeholder="Agency Sarl">
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="VAT_number">VAT number*</label>
+                                    <input type="text" class="form-control" id="VAT_number" placeholder="VAT number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="IATA_number">IATA number*</label>
+                                    <input type="email" class="form-control" id="IATA_number" placeholder="IATA number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Trade_Register_Number">Trade Register Number *</label>
+                                    <input type="text" class="form-control" id="Trade_Register_Number" placeholder="Trade Register Number">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="card"> -->
+                        <!-- <div class="card-header"> -->
+                        <!-- <strong>Horizontal</strong> -->
+                        <!-- Form -->
+                        <!-- </div> -->
+                        <!-- <div class="card-body"> -->
+                        <!-- <form action="" method="post" class="form-horizontal"> -->
+                        <!-- <div class="form-group row"> -->
+                        <!-- <label class="col-md-3 col-form-label" for="hf-email">Email</label> -->
+                        <!-- <div class="col-md-9"> -->
+                        <!-- <input type="email" id="hf-email" name="hf-email" class="form-control" placeholder="Enter Email.."> -->
+                        <!-- <span class="help-block">Please enter your email</span> -->
+                        <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- <div class="form-group row"> -->
+                        <!-- <label class="col-md-3 col-form-label" for="hf-password">Password</label> -->
+                        <!-- <div class="col-md-9"> -->
+                        <!-- <input type="password" id="hf-password" name="hf-password" class="form-control" placeholder="Enter Password.."> -->
+                        <!-- <span class="help-block">Please enter your password</span> -->
+                        <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- </form> -->
+                        <!-- </div> -->
+                        <!-- </div> -->
+
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Contact</strong>
+                                <small> Person</small>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label">Title *</label>
+
+                                            <div class="col-md-9 col-form-label">
+                                                <div class="form-check form-check-inline mr-1">
+                                                    <input class="form-check-input" id="Mr" name="inline-radios" type="radio" value="Mr">
+                                                    <label class="form-check-label" for="inline-radio1">Mr</label>
+                                                </div>
+                                                <div class="form-check form-check-inline mr-1">
+                                                    <input class="form-check-input" id="Miss" name="inline-radios" type="radio" value="Miss">
+                                                    <label class="form-check-label" for="Miss">Miss</label>
+                                                </div>
+                                                <div class="form-check form-check-inline mr-1">
+                                                    <input class="form-check-input" id="Mme" name="inline-radios" type="radio" value="Mme">
+                                                    <label class="form-check-label" for="Mme">Mme</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="First_name">First name</label>
+                                            <input type="text" class="form-control" id="First_name" placeholder="First name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="Middle_name">Middle name</label>
+                                            <input type="text" class="form-control" id="Middle_name" placeholder="Middle name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="Last_name">Last name</label>
+                                            <input type="text" class="form-control" id="Last_name" placeholder="Last name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-4">
+                                        <label for="Phone1">Phone 1 *</label>
+                                        <input type="text" class="form-control" id="Phone1" placeholder="Phone 1 ">
+
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <label for="Phone2">Phone 2</label>
+                                        <input type="text" class="form-control" id="Phone2" placeholder="Phone 2 ">
+
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="Fax">Fax *</label>
+                                            <input type="text" class="form-control" id="Fax" placeholder="Fax ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <label for="WebSite">Web site URL *</label>
+                                        <input type="text" class="form-control" id="WebSite" placeholder="www.aero-it.net">
+
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label for="Email">E-mail *</label>
+                                        <input type="text" class="form-control" id="Email" placeholder="user@company.com">
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="card-footer">
+                                <button class="btn btn-raised btn-warning mr-1" type="button">
+                                    <i class="ft-x"></i> Cancel
+                                </button>
+                                <button class="btn btn-raised btn-primary" type="button">
+                                    <i class="fa fa-check-square-o"></i> Save
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Basic Form</strong>
+                                    Elements
+                                </div>
+                                <div class="card-body">
+                                    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label">Static</label>
+                                            <div class="col-md-9">
+                                                <p class="form-control-static">Username</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="text-input">Text Input</label>
+                                            <div class="col-md-9">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Text">
+                                                <span class="help-block">This is a help text</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="email-input">Email Input</label>
+                                            <div class="col-md-9">
+                                                <input type="email" id="email-input" name="email-input" class="form-control" placeholder="Enter Email">
+                                                <span class="help-block">Please enter your email</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="password-input">Password</label>
+                                            <div class="col-md-9">
+                                                <input type="password" id="password-input" name="password-input" class="form-control" placeholder="Password">
+                                                <span class="help-block">Please enter a complex password</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="disabled-input">Disabled Input</label>
+                                            <div class="col-md-9">
+                                                <input type="text" id="disabled-input" name="disabled-input" class="form-control" placeholder="Disabled" disabled="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="textarea-input">Textarea</label>
+                                            <div class="col-md-9">
+                                                <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="Content.."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="select1">Select</label>
+                                            <div class="col-md-9">
+                                                <select id="select1" name="select1" class="form-control">
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="select2">Select Large</label>
+                                            <div class="col-md-9">
+                                                <select id="select2" name="select2" class="form-control form-control-lg">
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="select3">Select Small</label>
+                                            <div class="col-md-9">
+                                                <select id="select3" name="select3" class="form-control form-control-sm">
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="disabledSelect">Disabled Select</label>
+                                            <div class="col-md-9">
+                                                <select id="disabledSelect" class="form-control" disabled="">
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="multiple-select">Multiple select</label>
+                                            <div class="col-md-9">
+                                                <select id="multiple-select" name="multiple-select" class="form-control" size="5" multiple="">
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                    <option value="4">Option #4</option>
+                                                    <option value="5">Option #5</option>
+                                                    <option value="6">Option #6</option>
+                                                    <option value="7">Option #7</option>
+                                                    <option value="8">Option #8</option>
+                                                    <option value="9">Option #9</option>
+                                                    <option value="10">Option #10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label">Radios</label>
+                                            <div class="col-md-9 col-form-label">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" value="radio1" id="radio1" name="radios">
+                                                    <label class="form-check-label" for="radio1">
+                                                        Option 1
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" value="radio2" id="radio2" name="radios">
+                                                    <label class="form-check-label" for="radio2">
+                                                        Option 2
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" value="radio2" id="radio3" name="radios">
+                                                    <label class="form-check-label" for="radio3">
+                                                        Option 3
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label">Inline Radios</label>
+                                            <div class="col-md-9 col-form-label">
+                                                <div class="form-check form-check-inline mr-1">
+                                                    <input class="form-check-input" type="radio" id="inline-radio1" value="option1" name="inline-radios">
+                                                    <label class="form-check-label" for="inline-radio1">One</label>
+                                                </div>
+                                                <div class="form-check form-check-inline mr-1">
+                                                    <input class="form-check-input" type="radio" id="inline-radio2" value="option2" name="inline-radios">
+                                                    <label class="form-check-label" for="inline-radio2">Two</label>
+                                                </div>
+                                                <div class="form-check form-check-inline mr-1">
+                                                    <input class="form-check-input" type="radio" id="inline-radio3" value="option3" name="inline-radios">
+                                                    <label class="form-check-label" for="inline-radio3">Three</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label">Checkboxes</label>
+                                            <div class="col-md-9 col-form-label">
+                                                <div class="form-check checkbox">
+                                                    <input class="form-check-input" type="checkbox" value="" id="check1">
+                                                    <label class="form-check-label" for="check1">
+                                                        Option 1
+                                                    </label>
+                                                </div>
+                                                <div class="form-check checkbox">
+                                                    <input class="form-check-input" type="checkbox" value="" id="check2">
+                                                    <label class="form-check-label" for="check2">
+                                                        Option 2
+                                                    </label>
+                                                </div>
+                                                <div class="form-check checkbox">
+                                                    <input class="form-check-input" type="checkbox" value="" id="check3">
+                                                    <label class="form-check-label" for="check3">
+                                                        Option 3
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label">Inline Checkboxes</label>
+                                            <div class="col-md-9 col-form-label">
+                                                <div class="form-check form-check-inline mr-1">
+                                                    <input class="form-check-input" type="checkbox" id="inline-checkbox1" value="check1">
+                                                    <label class="form-check-label" for="inline-checkbox1">One</label>
+                                                </div>
+                                                <div class="form-check form-check-inline mr-1">
+                                                    <input class="form-check-input" type="checkbox" id="inline-checkbox2" value="check2">
+                                                    <label class="form-check-label" for="inline-checkbox2">Two</label>
+                                                </div>
+                                                <div class="form-check form-check-inline mr-1">
+                                                    <input class="form-check-input" type="checkbox" id="inline-checkbox3" value="check3">
+                                                    <label class="form-check-label" for="inline-checkbox3">Three</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="file-input">File input</label>
+                                            <div class="col-md-9">
+                                                <input type="file" id="file-input" name="file-input">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="file-multiple-input">Multiple File input</label>
+                                            <div class="col-md-9">
+                                                <input type="file" id="file-multiple-input" name="file-multiple-input" multiple="">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary">
+                                        <i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger">
+                                        <i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Inline</strong>
+                                    Form
+                                </div>
+                                <div class="card-body">
+                                    <form action="" method="post" class="form-inline">
+                                        <div class="form-group">
+                                            <label for="exampleInputName2">Name</label>
+                                            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail2">Email</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary">
+                                        <i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger">
+                                        <i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Horizontal</strong>
+                                    Form
+                                </div>
+                                <div class="card-body">
+                                    <form action="" method="post" class="form-horizontal">
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="hf-email">Email</label>
+                                            <div class="col-md-9">
+                                                <input type="email" id="hf-email" name="hf-email" class="form-control" placeholder="Enter Email..">
+                                                <span class="help-block">Please enter your email</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="hf-password">Password</label>
+                                            <div class="col-md-9">
+                                                <input type="password" id="hf-password" name="hf-password" class="form-control" placeholder="Enter Password..">
+                                                <span class="help-block">Please enter your password</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary">
+                                        <i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger">
+                                        <i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Normal</strong>
+                                    Form
+                                </div>
+                                <div class="card-body">
+                                    <form action="" method="post">
+                                        <div class="form-group">
+                                            <label for="nf-email">Email</label>
+                                            <input type="email" id="nf-email" name="nf-email" class="form-control" placeholder="Enter Email..">
+                                            <span class="help-block">Please enter your email</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nf-password">Password</label>
+                                            <input type="password" id="nf-password" name="nf-password" class="form-control" placeholder="Enter Password..">
+                                            <span class="help-block">Please enter your password</span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary">
+                                        <i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger">
+                                        <i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    Input
+                                    <strong>Grid</strong>
+                                </div>
+                                <div class="card-body">
+                                    <form action="" method="post" class="form-horizontal">
+                                        <div class="form-group row">
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control" placeholder=".col-sm-3">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" placeholder=".col-sm-4">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" placeholder=".col-sm-5">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" placeholder=".col-sm-6">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" placeholder=".col-sm-7">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" placeholder=".col-sm-8">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder=".col-sm-9">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" placeholder=".col-sm-10">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-11">
+                                                <input type="text" class="form-control" placeholder=".col-sm-11">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <input type="text" class="form-control" placeholder=".col-sm-12">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary">
+                                        <i class="fa fa-user"></i> Login</button>
+                                    <button type="reset" class="btn btn-sm btn-danger">
+                                        <i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    Input
+                                    <strong>Sizes</strong>
+                                </div>
+                                <div class="card-body">
+                                    <form action="" method="post" class="form-horizontal">
+                                        <div class="form-group row">
+                                            <label class="col-sm-5 col-form-label" for="input-small">Small Input</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" id="input-small" name="input-small" class="form-control form-control-sm" placeholder=".form-control-sm">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-5 col-form-label" for="input-normal">Normal Input</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" id="input-normal" name="input-normal" class="form-control" placeholder="Normal">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-5 col-form-label" for="input-large">Large Input</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" id="input-large" name="input-large" class="form-control form-control-lg" placeholder=".form-control-lg">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary">
+                                        <i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger">
+                                        <i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

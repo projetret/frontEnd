@@ -1,5 +1,5 @@
 import { RouteInfo } from './sidebar.metadata';
-import { AdminRoutingModule} from '../../admin/admin-routing.module';
+
 
 export const ROUTES: RouteInfo[] = [
 
@@ -11,23 +11,29 @@ export const ROUTES: RouteInfo[] = [
     }, */
 
     {
-        path: '/Agency', title: 'Agency', icon: 'ft-globe', class: 'has-sub', badge: '', badgeClass: '', isExternalLink: false,
+        path: 'javascript:;', title: 'Agency', icon: 'ft-globe', class: 'has-sub', badge: '', badgeClass: '', isExternalLink: false,
         submenu: [
-            { path: '/agencyprofile', title: 'Agency profile', icon: 'fa fa-vcard-o', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] },
-            { path: '/users', title: 'Users', icon: 'fa fa-user', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] },
-            { path: '/setting', title: 'Setting', icon: 'fa fa-cogs', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] },
+
+            {path: '/agencyprofile', title: 'Agency Profile', icon: 'fa fa-vcard-o', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: []},
             
+            {path: '/users', title: 'Users', icon: 'fa fa-user', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: []},
+            
+            {path: '/setting', title: 'Setting', icon: 'fa fa-cogs', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: []},
+    
         ]
      
     },
     {
         path: '/Client ', title: 'Client ', icon: 'fa fa-user', class: 'has-sub', badge: '', badgeClass: '', isExternalLink: false,
         submenu: [
-            { path: '/agencies', title: 'Agencies', icon: 'ft-globe', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] },
-            { path: '/distributors', title: 'Distributors', icon: 'fa fa-sitemap', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] },
-            { path: '/corporate-clients', title: 'Corporate clients', icon: 'fa fa-handshake-o', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] },
-            { path: '/privateclients', title: 'Private clients', icon: 'fa fa-user-secret', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] },
+            {path: '/agencies', title: 'Agencies', icon: 'ft-globe', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: []},
             
+            {path: '/distributors', title: 'Distributors', icon: 'fa fa-sitemap', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: []},
+            
+            {path: '/corporateclients', title: 'Corporate clients', icon: 'fa fa-handshake-o', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: []},
+           
+            {path: '/privateclient', title: 'Private clients', icon: 'fa fa-user-secret', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: []},
+      
         ]
      
     },
@@ -39,24 +45,31 @@ export const ROUTES: RouteInfo[] = [
      
     }, */
     {
-        path: '/SecuritiesManagement ', title: 'Gestion des Titres ', icon: 'fa fa-exchange', class: 'has-sub', badge: '', badgeClass: '', isExternalLink: false,
+        path: '/Securitiesmanagement ', title: 'Gestion des Titres ', icon: 'fa fa-exchange', class: 'has-sub', badge: '', badgeClass: '', isExternalLink: false,
         submenu: [
-            { path: '/cashing', title: 'Encaissements', icon: 'ft-globe', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] },
-            { path: '/securities-instances', title: 'Titres en Instances', icon: 'fa fa-history', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] },
-        ]
+
+            {path: '/cashing', title: 'Encaissements', icon: 'ft-globe', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: []},
+     
+            {path: '/securitiesinstances', title: 'Titres en Instances', icon: 'fa fa-history', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: []},
+      
+      ]
      
     },
     {
         path: '/Finance  ', title: 'Finance ', icon: 'fa fa-line-chart', class: 'has-sub', badge: '', badgeClass: '', isExternalLink: false,
         submenu: [
-            { path: 'javascript:;', title: 'Bill', icon: 'fa fa-money', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] }, 
+          
+            {path: '/bill', title: 'Bill', icon: 'fa fa-money', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: []},
+      
+    
         ]
      
     },
     {
         path: '/Gestions  ', title: 'Gestions  ', icon: 'fa fa-tasks', class: 'has-sub', badge: '', badgeClass: '', isExternalLink: false,
         submenu: [
-            { path: 'javascript:;', title: 'Suivie Clients', icon: 'fa fa-connectdevelop', class: '', badge: '', badgeClass: '', isExternalLink: true, submenu: [] }, 
+            {path: '/management', title: 'Suivie Clients', icon: 'fa fa-connectdevelop', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: []},
+      
         ]
      
     },

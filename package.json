@@ -66,12 +66,13 @@
     "ng2-validation": "^4.2.0",
     "ngx-bootstrap": "^3.0.1",
     "ngx-quill": "^3.2.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.9.2",
     "nouislider": "^11.1.0",
     "npm-install-peers": "^1.2.1",
     "particle-api-js": "^7.2.0",
     "particles.js": "^2.0.0",
     "path": "^0.12.7",
+    "polyfills": "^2.1.1",
     "popper.js": "^1.14.3",
     "resize-observer-polyfill": "^1.4.2",
     "rxjs": "^6.2.1",
@@ -82,7 +83,7 @@
     "ui-kit": "^0.17.0",
     "videogular2": "^6.2.2",
     "web-animations-js": "^2.2.5",
-    "zone.js": "^0.8.18"
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",

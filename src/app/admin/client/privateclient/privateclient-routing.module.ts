@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ManagementComponent } from './management.component';
+import { PrivateclientComponent } from './privateclient.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ManagementComponent
+    component: PrivateclientComponent
   }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ManagementRoutingModule { }
+export class PrivateclientRoutingModule { }
