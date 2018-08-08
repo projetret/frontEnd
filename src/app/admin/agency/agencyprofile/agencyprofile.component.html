@@ -1,0 +1,356 @@
+<form id="agency_profile" novalidate="" #f="ngForm" (submit)="agency_profile($event)">
+    <div class="container-fluid">
+        <div id="ui-view">
+            <div>
+                <div class="animated fadeIn">
+                    <div class="card">
+                        <div class="card-header">
+                            <div style="float: left;margin: auto; width: 50%; padding: 10px;">
+                                <strong>agency</strong>
+                                <small> profile</small>
+                            </div>
+                            <div style="float: right;margin: auto;">
+                                <button class="btn btn-raised btn-info mr-1" type="button" id="Edit">
+                                    <i class="fa fa-edit"></i> Edit
+                                </button>
+                                <button class="btn btn-raised btn-danger mr-1" type="button" id="Cancel">
+                                    <i class="ft-x"></i> Cancel
+                                </button>
+                                <button class="btn btn-raised btn-warning mr-1" type="button" id="Clear">
+                                    <i class="ft-x"></i> Clear
+                                </button>
+                                <button class="btn btn-raised btn-primary" type="button" id="Save">
+                                    <i class="fa fa-check-square-o"></i> Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <strong>Company</strong>
+                                            <small> Details</small>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <label for="company">Company</label>
+                                                <input disabled type="text" class="form-control" id="company" placeholder="Enter your company name" disabled>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="vat">VAT</label>
+                                                <input disabled type="text" class="form-control" id="vat" placeholder="PL1234567890" disabled>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="street">Street</label>
+                                                <input disabled type="text" class="form-control" id="street" placeholder="Enter street name">
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-sm-8">
+                                                    <label for="city">City</label>
+                                                    <input disabled type="text" class="form-control" id="city" placeholder="Enter your city">
+                                                </div>
+                                                <div class="form-group col-sm-4">
+                                                    <label for="postal-code">Postal Code</label>
+                                                    <input disabled type="text" class="form-control" id="postal-code" placeholder="Postal Code">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="country">Country</label>
+                                                <input disabled type="text" class="form-control" id="country" placeholder="Country name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <strong>Additional</strong>
+                                            <small> Informations</small>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <label for="Full_name_legacy">Full name of legal entity</label>
+                                                <input disabled type="text" class="form-control" id="Full_name_legacy" placeholder="Agency Sarl">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="VAT_number">VAT number*</label>
+                                                <input disabled type="text" class="form-control" id="VAT_number" placeholder="VAT number">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="IATA_number">IATA number*</label>
+                                                <input disabled type="email" class="form-control" id="IATA_number" placeholder="IATA number">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Trade_Register_Number">Trade Register Number *</label>
+                                                <input disabled type="text" class="form-control" id="Trade_Register_Number" placeholder="Trade Register Number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <strong>Contact</strong>
+                                            <small> Person</small>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group row">
+                                                        <label class="col-md-3 col-form-label">Title *</label>
+                                                        <div class="col-md-9 col-form-label">
+                                                            <div class="form-check form-check-inline mr-1">
+                                                                <input disabled class="form-check-input" id="Mr" name="inline-radios" type="radio" value="Mr">
+                                                                <label class="form-check-label" for="inline-radio1">Mr</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline mr-1">
+                                                                <input disabled class="form-check-input" id="Miss" name="inline-radios" type="radio" value="Miss">
+                                                                <label class="form-check-label" for="Miss">Miss</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline mr-1">
+                                                                <input disabled class="form-check-input" id="Mme" name="inline-radios" type="radio" value="Mme">
+                                                                <label class="form-check-label" for="Mme">Mme</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="First_name">First name</label>
+                                                        <input disabled type="text" class="form-control" id="First_name" placeholder="First name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="Middle_name">Middle name</label>
+                                                        <input disabled type="text" class="form-control" id="Middle_name" placeholder="Middle name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="Last_name">Last name</label>
+                                                        <input disabled type="text" class="form-control" id="Last_name" placeholder="Last name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-sm-4">
+                                                    <label for="Phone1">Phone 1 *</label>
+                                                    <input disabled type="text" class="form-control" id="Phone1" placeholder="Phone 1 ">
+                                                </div>
+                                                <div class="form-group col-sm-4">
+                                                    <label for="Phone2">Phone 2</label>
+                                                    <input disabled type="text" class="form-control" id="Phone2" placeholder="Phone 2 ">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <label for="Fax">Fax *</label>
+                                                        <input disabled type="text" class="form-control" id="Fax" placeholder="Fax ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-sm-6">
+                                                    <label for="WebSite">Web site URL *</label>
+                                                    <input disabled type="text" class="form-control" id="WebSite" placeholder="www.aero-it.net">
+                                                </div>
+                                                <div class="form-group col-sm-6">
+                                                    <label for="Email">E-mail *</label>
+                                                    <input disabled type="text" class="form-control" id="Email" placeholder="user@company.com">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--    card               -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <strong>Profile </strong>
+                                            <small>settings</small>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label" for="Language">Language</label>
+                                                <div class="col-md-9">
+                                                    <select disabled id="Language" name="Language" class="form-control">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">English</option>
+                                                        <option value="2">French</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label" for="Price_format">Price format </label>
+                                                <div class="col-md-9">
+                                                    <select disabled id="Price_format" name="Price_format " class="form-control">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">1000000.000</option>
+                                                        <option value="2">1 000 000.00</option>
+                                                        <option value="3">1,000,000.00</option>
+                                                        <option value="4">1000000,00</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label" for="Date_format">Date format </label>
+                                                <div class="col-md-9">
+                                                    <select disabled id="Date_format" name="Date_format " class="form-control">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">MM/dd/yyyy</option>
+                                                        <option value="2">dd.MM.yyyy</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label" for="Time_zone">Time zone </label>
+                                                <div class="col-md-9">
+                                                    <select disabled id="Time_zone" name="Time_zone " class="form-control">
+                                                        <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
+                                                        <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
+                                                        <option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-10">(GMT-10:00) Hawaii</option>
+                                                        <option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="-9">(GMT-09:00) Alaska</option>
+                                                        <option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+                                                        <option timeZoneId="6" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Tijuana, Baja California</option>
+                                                        <option timeZoneId="7" gmtAdjustment="GMT-07:00" useDaylightTime="0" value="-7">(GMT-07:00) Arizona</option>
+                                                        <option timeZoneId="8" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+                                                        <option timeZoneId="9" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
+                                                        <option timeZoneId="10" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) Central America</option>
+                                                        <option timeZoneId="11" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) Central Time (US & Canada)</option>
+                                                        <option timeZoneId="12" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+                                                        <option timeZoneId="13" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) Saskatchewan</option>
+                                                        <option timeZoneId="14" gmtAdjustment="GMT-05:00" useDaylightTime="0" value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
+                                                        <option timeZoneId="15" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
+                                                        <option timeZoneId="16" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) Indiana (East)</option>
+                                                        <option timeZoneId="17" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
+                                                        <option timeZoneId="18" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) Caracas, La Paz</option>
+                                                        <option timeZoneId="19" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) Manaus</option>
+                                                        <option timeZoneId="20" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) Santiago</option>
+                                                        <option timeZoneId="21" gmtAdjustment="GMT-03:30" useDaylightTime="1" value="-3.5">(GMT-03:30) Newfoundland</option>
+                                                        <option timeZoneId="22" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Brasilia</option>
+                                                        <option timeZoneId="23" gmtAdjustment="GMT-03:00" useDaylightTime="0" value="-3">(GMT-03:00) Buenos Aires, Georgetown</option>
+                                                        <option timeZoneId="24" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Greenland</option>
+                                                        <option timeZoneId="25" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Montevideo</option>
+                                                        <option timeZoneId="26" gmtAdjustment="GMT-02:00" useDaylightTime="1" value="-2">(GMT-02:00) Mid-Atlantic</option>
+                                                        <option timeZoneId="27" gmtAdjustment="GMT-01:00" useDaylightTime="0" value="-1">(GMT-01:00) Cape Verde Is.</option>
+                                                        <option timeZoneId="28" gmtAdjustment="GMT-01:00" useDaylightTime="1" value="-1">(GMT-01:00) Azores</option>
+                                                        <option timeZoneId="29" gmtAdjustment="GMT+00:00" useDaylightTime="0" value="0">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
+                                                        <option timeZoneId="30" gmtAdjustment="GMT+00:00" useDaylightTime="1" value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
+                                                        <option timeZoneId="31" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+                                                        <option timeZoneId="32" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+                                                        <option timeZoneId="33" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+                                                        <option timeZoneId="34" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+                                                        <option timeZoneId="35" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) West Central Africa</option>
+                                                        <option timeZoneId="36" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Amman</option>
+                                                        <option timeZoneId="37" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Athens, Bucharest, Istanbul</option>
+                                                        <option timeZoneId="38" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Beirut</option>
+                                                        <option timeZoneId="39" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Cairo</option>
+                                                        <option timeZoneId="40" gmtAdjustment="GMT+02:00" useDaylightTime="0" value="2">(GMT+02:00) Harare, Pretoria</option>
+                                                        <option timeZoneId="41" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+                                                        <option timeZoneId="42" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Jerusalem</option>
+                                                        <option timeZoneId="43" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Minsk</option>
+                                                        <option timeZoneId="44" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Windhoek</option>
+                                                        <option timeZoneId="45" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
+                                                        <option timeZoneId="46" gmtAdjustment="GMT+03:00" useDaylightTime="1" value="3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+                                                        <option timeZoneId="47" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Nairobi</option>
+                                                        <option timeZoneId="48" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Tbilisi</option>
+                                                        <option timeZoneId="49" gmtAdjustment="GMT+03:30" useDaylightTime="1" value="3.5">(GMT+03:30) Tehran</option>
+                                                        <option timeZoneId="50" gmtAdjustment="GMT+04:00" useDaylightTime="0" value="4">(GMT+04:00) Abu Dhabi, Muscat</option>
+                                                        <option timeZoneId="51" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) Baku</option>
+                                                        <option timeZoneId="52" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) Yerevan</option>
+                                                        <option timeZoneId="53" gmtAdjustment="GMT+04:30" useDaylightTime="0" value="4.5">(GMT+04:30) Kabul</option>
+                                                        <option timeZoneId="54" gmtAdjustment="GMT+05:00" useDaylightTime="1" value="5">(GMT+05:00) Yekaterinburg</option>
+                                                        <option timeZoneId="55" gmtAdjustment="GMT+05:00" useDaylightTime="0" value="5">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+                                                        <option timeZoneId="56" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) Sri Jayawardenapura</option>
+                                                        <option timeZoneId="57" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+                                                        <option timeZoneId="58" gmtAdjustment="GMT+05:45" useDaylightTime="0" value="5.75">(GMT+05:45) Kathmandu</option>
+                                                        <option timeZoneId="59" gmtAdjustment="GMT+06:00" useDaylightTime="1" value="6">(GMT+06:00) Almaty, Novosibirsk</option>
+                                                        <option timeZoneId="60" gmtAdjustment="GMT+06:00" useDaylightTime="0" value="6">(GMT+06:00) Astana, Dhaka</option>
+                                                        <option timeZoneId="61" gmtAdjustment="GMT+06:30" useDaylightTime="0" value="6.5">(GMT+06:30) Yangon (Rangoon)</option>
+                                                        <option timeZoneId="62" gmtAdjustment="GMT+07:00" useDaylightTime="0" value="7">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+                                                        <option timeZoneId="63" gmtAdjustment="GMT+07:00" useDaylightTime="1" value="7">(GMT+07:00) Krasnoyarsk</option>
+                                                        <option timeZoneId="64" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+                                                        <option timeZoneId="65" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Kuala Lumpur, Singapore</option>
+                                                        <option timeZoneId="66" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
+                                                        <option timeZoneId="67" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Perth</option>
+                                                        <option timeZoneId="68" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Taipei</option>
+                                                        <option timeZoneId="69" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+                                                        <option timeZoneId="70" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) Seoul</option>
+                                                        <option timeZoneId="71" gmtAdjustment="GMT+09:00" useDaylightTime="1" value="9">(GMT+09:00) Yakutsk</option>
+                                                        <option timeZoneId="72" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) Adelaide</option>
+                                                        <option timeZoneId="73" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) Darwin</option>
+                                                        <option timeZoneId="74" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) Brisbane</option>
+                                                        <option timeZoneId="75" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Canberra, Melbourne, Sydney</option>
+                                                        <option timeZoneId="76" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Hobart</option>
+                                                        <option timeZoneId="77" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) Guam, Port Moresby</option>
+                                                        <option timeZoneId="78" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Vladivostok</option>
+                                                        <option timeZoneId="79" gmtAdjustment="GMT+11:00" useDaylightTime="1" value="11">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
+                                                        <option timeZoneId="80" gmtAdjustment="GMT+12:00" useDaylightTime="1" value="12">(GMT+12:00) Auckland, Wellington</option>
+                                                        <option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
+                                                        <option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label">Time format </label>
+                                                <div class="col-md-9 col-form-label">
+                                                    <div class="form-check">
+                                                        <input disabled class="form-check-input" type="radio" value="24hours" id="24hours" name="radios">
+                                                        <label class="form-check-label" for="24hours">
+                                                            24 hours (hh:mm)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input disabled class="form-check-input" type="radio" value="12hours" id="12hours" name="radios">
+                                                        <label class="form-check-label" for="12hours">
+                                                            12 hours (hh:mm a.m./p.m.)
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label" for="logo">Logo </label>
+                                                <div class="col-md-9">
+                                                    <input disabled type="file" id="Logo" name="Logo">
+                                                    <br>
+                                                    <div style="text-align: right;">
+                                                        <img id="Logo_preview" height="100" width="100" src="http://placehold.it/100x100" alt="your Logo" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="float: right;margin: auto;">
+                                <button class="btn btn-raised btn-info mr-1" type="button" id="Edit1">
+                                    <i class="fa fa-edit"></i> Edit
+                                </button>
+                                <button class="btn btn-raised btn-danger mr-1" type="button" id="Cancel1">
+                                    <i class="ft-x"></i> Cancel
+                                </button>
+                                <button class="btn btn-raised btn-warning mr-1" type="button" id="Clear1">
+                                    <i class="ft-x"></i> Clear
+                                </button>
+                                <button class="btn btn-raised btn-primary" type="button" id="Save">
+                                    <i class="fa fa-check-square-o"></i> Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

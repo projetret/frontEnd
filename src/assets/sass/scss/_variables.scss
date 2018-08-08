@@ -1,0 +1,21 @@
+// Theme Colors
+$theme-colors: ( primary: #007bff, success: #28a745, info: #17a2b8, warning: #ffc107, danger: #dc3545, secondary: #6c757d, light: #f8f9fa, dark: #343a40);
+// Spacing
+$spacer: 1.5rem;
+$spacers: ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .75), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 3)) !default;
+// Body
+$body-bg : #f5f7fa;
+// Fonts
+$font-family-sans-serif: "Montserrat",
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif;
+$font-family-content: "Rubik",
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif;
+$font-size-root: 16px;
