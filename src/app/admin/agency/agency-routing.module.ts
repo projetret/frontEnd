@@ -10,21 +10,21 @@ const routes: Routes = [
      component: AgencyprofileComponent,
     data: {
       title: 'Agencyprofile'
-    },    
+    },
   },
   {
     path: 'users',
      component: UsersComponent,
     data: {
       title: 'users'
-    },    
+    },
   },
   {
     path: 'Settings',
      component: SettingComponent,
     data: {
       title: 'Settings'
-    },    
+    },
   }
 ];
 @NgModule({

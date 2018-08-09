@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {UsersService} from './user.service';
+import { User } from './user';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -6,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
+
 
   constructor() { }
 

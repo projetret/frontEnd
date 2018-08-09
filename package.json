@@ -66,7 +66,7 @@
     "ng2-validation": "^4.2.0",
     "ngx-bootstrap": "^3.0.1",
     "ngx-quill": "^3.2.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.9.3",
     "nouislider": "^11.1.0",
     "npm-install-peers": "^1.2.1",
     "particle-api-js": "^7.2.0",
@@ -82,7 +82,7 @@
     "ui-kit": "^0.17.0",
     "videogular2": "^6.2.2",
     "web-animations-js": "^2.2.5",
-    "zone.js": "^0.8.18"
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
@@ -102,7 +102,7 @@
     "karma-coverage-istanbul-reporter": "^2.0.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^1.1.0",
-    "protractor": "~5.3.2",
+    "protractor": "^5.4.0",
     "ts-node": "^6.1.1",
     "tslint": "^5.7.0",
     "typescript": "^2.7.2"

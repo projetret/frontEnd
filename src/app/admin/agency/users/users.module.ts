@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { UsersRoutingModule } from './users-routing.module';
 import { UsersComponent } from './users.component';
-
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   imports: [
+    HttpModule,
+    HttpClientModule,
     CommonModule,
     UsersRoutingModule
   ],
+
   declarations: [UsersComponent]
 })
 export class UsersModule { }
