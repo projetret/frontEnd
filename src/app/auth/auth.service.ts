@@ -1,24 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 
+// tslint:disable-next-line:class-name
 interface myData {
-  success: boolean,
-  message: string
+  success: boolean;
+  message: string;
 }
 
 @Injectable()
 export class AuthService {
 
-  private loggedInStatus = false
+  private loggedInStatus = false;
 
   constructor(private http: HttpClient) { }
 
   setLoggedIn(value: boolean) {
-    this.loggedInStatus = value
+    this.loggedInStatus = value;
   }
 
   get isLoggedIn() {
-    return this.loggedInStatus
+    return this.loggedInStatus;
   }
 
   getUserDetails(CompanyCode, inputEmail, inputPass) {
@@ -28,7 +29,7 @@ export class AuthService {
       inputEmail,
       inputPass
 
-    })
+    });
   }
 
 }

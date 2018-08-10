@@ -15,7 +15,8 @@ import { FullLayoutComponent } from './layouts/full/full-layout.component';
 import { AuthService } from './auth/auth.service';
 import { UserService } from './auth/user.service';
 import { AuthGuard } from './auth/auth.guard';
-import { UsersService} from './admin/agency/users/user.service';
+import {MysqlService} from './admin/agency/users/mysql.service';
+import { HttpModule } from '@angular/http';
 import * as $ from 'jquery';
 export const createTranslateLoader = (http: HttpClient) => {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -27,6 +28,7 @@ export const createTranslateLoader = (http: HttpClient) => {
     ContentLayoutComponent
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
@@ -43,7 +45,7 @@ export const createTranslateLoader = (http: HttpClient) => {
     AuthModule,
     NgbModule.forRoot()
   ],
-  providers: [ UsersService, AuthService, UserService, AuthGuard],
+  providers: [MysqlService, AuthService, UserService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

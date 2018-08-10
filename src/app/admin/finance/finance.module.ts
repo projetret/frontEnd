@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BillComponent } from '../Finance/bill/bill.component';
+import { BillComponent } from './bill/bill.component';
 
 @NgModule({
   imports: [
