@@ -9,8 +9,8 @@ $fid =  $data['id'];
 $fname =  $data['firstname'];
 $lname =  $data['lastname'];
 
-$conn = new mysqli("localhost","root","toor","api");
-$sql = "insert into users(id,firstName,lastName) values('".$fid."','".$fname."','".$lname."')";
+$conn = new mysqli("localhost","root","toor","test");
+$sql = "insert into agents(id,firstName,lastName) values('".$fid."','".$fname."','".$lname."')";
 
 $result = $con->query($sql);
 

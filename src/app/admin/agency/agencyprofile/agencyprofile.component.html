@@ -1,4 +1,4 @@
-<form id="agency_profile">
+<form id="agency_profile" *ngFor="let _userMysql of agencyMysql">
     <div class="container-fluid">
         <div id="ui-view">
             <div>
@@ -10,16 +10,14 @@
                                 <small> profile</small>
                             </div>
                             <div style="float: right;margin: auto;">
-                                <button class="btn btn-raised btn-info mr-1" type="button" id="Edit">
+                                <button class="btn btn-raised btn-info mr-1" type="button" id="Edit" onclick="
+                                event.preventDefault();
+                                $('#agency_profile input, #agency_profile select').prop('disabled', false);
+ $('#company_namecompany_name').prop('disabled', true);
+                                $('#company_name,#companycode').attr('disabled', 'disabled');">
                                     <i class="fa fa-edit"></i> Edit
                                 </button>
-                                <button class="btn btn-raised btn-danger mr-1" type="button" id="Cancel">
-                                    <i class="ft-x"></i> Cancel
-                                </button>
-                                <button class="btn btn-raised btn-warning mr-1" type="button" id="Clear">
-                                    <i class="ft-x"></i> Clear
-                                </button>
-                                <button class="btn btn-raised btn-primary" type="button" id="Save">
+                                <button class="btn btn-raised btn-primary" type="button" id="Save" (click)="UpdateProfile()">
                                     <i class="fa fa-check-square-o"></i> Save
                                 </button>
                             </div>
@@ -36,30 +34,32 @@
                                         </div>
                                         <div class="card-body">
                                             <div class="form-group">
-                                                <label for="company">Company</label>
-                                                <input disabled type="text" class="form-control" id="company" placeholder="Enter your company name" disabled autocomplete='company'>
+                                                <label for="company_name">Company</label>
+                                                <input ngModel disabled type="text" class="form-control" id="company_name" value="{{_userMysql.COMPANY_NAME}}" autocomplete='company'>
                                             </div>
                                             <div class="form-group">
-                                                <label for="vat">VAT</label>
-                                                <input disabled type="text" class="form-control" id="vat" placeholder="PL1234567890" disabled>
+                                                <label for="companycode">TRADE REGISTER NUMBER *</label>
+                                                <input ngModel disabled type="text" class="form-control" id="companycode" value="{{_userMysql.COMPANYCODE}}">
                                             </div>
+
                                             <div class="form-group">
                                                 <label for="street">Street</label>
-                                                <input disabled type="text" class="form-control" id="street" placeholder="Enter street name" autocomplete='address-line1'>
+                                                <input ngModel disabled type="text" class=" form-control " id="street " value="{{_userMysql.STREET}}
+    " autocomplete='address-line1'>
                                             </div>
                                             <div class="row">
                                                 <div class="form-group col-sm-8">
                                                     <label for="city">City</label>
-                                                    <input disabled type="text" class="form-control" id="city" placeholder="Enter your city" autocomplete='address-level2'>
+                                                    <input ngModel disabled type="text" class="form-control" id="city" value="{{_userMysql.CITY}}" autocomplete='address-level2'>
                                                 </div>
                                                 <div class="form-group col-sm-4">
-                                                    <label for="postal-code">Postal Code</label>
-                                                    <input disabled type="text" class="form-control" id="postal-code" placeholder="Postal Code" autocomplete='postal-code'>
+                                                    <label for="postal_code">Postal Code</label>
+                                                    <input ngModel disabled type="text" class="form-control" formControlName="postal_code" id="postal_code" value="{{_userMysql.POSTAL_CODE}}" autocomplete='postal-code'>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="country">Country</label>
-                                                <input disabled type="text" class="form-control" id="country" placeholder="Country name" autocomplete='country-name'>
+                                                <input ngModel disabled type="text" class="form-control" id="country" value="{{_userMysql.COUNTRY}}" autocomplete='country-name'>
                                             </div>
                                         </div>
                                     </div>
@@ -73,20 +73,17 @@
                                         <div class="card-body">
                                             <div class="form-group">
                                                 <label for="Full_name_legacy">Full name of legal entity</label>
-                                                <input disabled type="text" class="form-control" id="Full_name_legacy" placeholder="Agency Sarl" autocomplete='name'>
+                                                <input ngModel disabled type="text" class="form-control" id="Full_name_legacy" value="{{_userMysql.FULL_NAME_LEGACY}}" autocomplete='name'>
                                             </div>
                                             <div class="form-group">
                                                 <label for="VAT_number">VAT number*</label>
-                                                <input disabled type="text" class="form-control" id="VAT_number" placeholder="VAT number">
+                                                <input ngModel disabled type="text" class="form-control" id="VAT_number" value="{{_userMysql.VAT_NUMBER}}">
                                             </div>
                                             <div class="form-group">
                                                 <label for="IATA_number">IATA number*</label>
-                                                <input disabled type="email" class="form-control" id="IATA_number" placeholder="IATA number">
+                                                <input ngModel disabled type="number" class="form-control" id="IATA_number" value="{{_userMysql.IATA_NUMBER}}">
                                             </div>
-                                            <div class="form-group">
-                                                <label for="Trade_Register_Number">Trade Register Number *</label>
-                                                <input disabled type="text" class="form-control" id="Trade_Register_Number" placeholder="Trade Register Number">
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -104,7 +101,8 @@
                                                     <div class="form-group">
                                                         <label for="Title">Title </label>
                                                         <select disabled id="Title" name="Title" class="form-control" autocomplete='title'>
-                                                            <option disabled selected value>Please select</option>
+                                                            <option disabled selected value>{{_userMysql.TITLE}}</option>
+                                                            <option disabled value>Please select</option>
                                                             <option value="M">Mr</option>
                                                             <option value="Miss">Miss</option>
                                                             <option value="Mme">Mme</option>
@@ -116,7 +114,7 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label for="First_name">First name</label>
-                                                        <input disabled type="text" class="form-control" id="First_name" placeholder="First name" autocomplete='given-name'>
+                                                        <input ngModel disabled type="text" class="form-control" id="First_name" value="{{_userMysql.FIRST_NAME}}" autocomplete='given-name'>
                                                     </div>
                                                 </div>
                                             </div>
@@ -124,7 +122,7 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label for="Middle_name">Middle name</label>
-                                                        <input disabled type="text" class="form-control" id="Middle_name" placeholder="Middle name" autocomplete='additional-name'>
+                                                        <input ngModel disabled type="text" class="form-control" id="Middle_name" value="{{_userMysql.MIDDLE_NAME}}" autocomplete='additional-name'>
                                                     </div>
                                                 </div>
                                             </div>
@@ -132,34 +130,34 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label for="Last_name">Last name</label>
-                                                        <input disabled type="text" class="form-control" id="Last_name" placeholder="Last name" autocomplete='family-name'>
+                                                        <input ngModel disabled type="text" class="form-control" id="Last_name" value="{{_userMysql.LAST_NAME}}" autocomplete='family-name'>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="form-group col-sm-4">
                                                     <label for="Phone1">Phone 1 *</label>
-                                                    <input disabled type="text" class="form-control" id="Phone1" placeholder="Phone 1 " autocomplete='tel'>
+                                                    <input ngModel disabled type="text" class="form-control" id="Phone1" value="{{_userMysql.PHONE1}}" autocomplete='tel'>
                                                 </div>
                                                 <div class="form-group col-sm-4">
                                                     <label for="Phone2">Phone 2</label>
-                                                    <input disabled type="text" class="form-control" id="Phone2" placeholder="Phone 2 " autocomplete='tel2'>
+                                                    <input ngModel disabled type="text" class="form-control" id="Phone2" value="{{_userMysql.PHONE2}}" autocomplete='tel2'>
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <div class="form-group">
                                                         <label for="Fax">Fax *</label>
-                                                        <input disabled type="text" class="form-control" id="Fax" placeholder="Fax " autocomplete='tel-national'>
+                                                        <input ngModel disabled type="text" class="form-control" id="Fax" value="{{_userMysql.FAX}}" autocomplete='tel-national'>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="form-group col-sm-12">
                                                     <label for="WebSite">Web site URL *</label>
-                                                    <input disabled type="text" class="form-control" id="WebSite" placeholder="www.aero-it.net">
+                                                    <input ngModel disabled type="text" class="form-control" id="WebSite" value="{{_userMysql.WEBSITE}}">
                                                 </div>
                                                 <div class="form-group col-sm-12">
                                                     <label for="Email">E-mail *</label>
-                                                    <input disabled type="text" class="form-control" id="Email" placeholder="user@company.com" autocomplete='email'>
+                                                    <input ngModel disabled type="text" class="form-control" id="Email" value="{{_userMysql.EMAIL}}" autocomplete='email'>
                                                 </div>
                                             </div>
                                         </div>
@@ -178,7 +176,8 @@
                                                     <div class="form-group">
                                                         <label for="Language">Language</label>
                                                         <select disabled id="Language" name="Language" class="form-control">
-                                                            <option disabled selected value>Please select</option>
+                                                            <option disabled selected value>{{_userMysql.LANGUAGE}}</option>
+                                                            <option disabled value>Please select</option>
                                                             <option value="1">English</option>
                                                             <option value="2">French</option>
                                                         </select>
@@ -190,7 +189,8 @@
                                                     <div class="form-group">
                                                         <label for="Price_format">Price format </label>
                                                         <select disabled id="Price_format" name="Price_format " class="form-control">
-                                                            <option disabled selected value>Please select</option>
+                                                            <option disabled selected value>{{_userMysql.PRICE_FORMAT}}</option>
+                                                            <option disabled value>Please select</option>
                                                             <option value="1">1000000.000</option>
                                                             <option value="2">1 000 000.00</option>
                                                             <option value="3">1,000,000.00</option>
@@ -204,7 +204,8 @@
                                                     <div class="form-group">
                                                         <label for="Date_format">Date format </label>
                                                         <select disabled id="Date_format" name="Date_format " class="form-control">
-                                                            <option disabled selected value>Please select</option>
+                                                            <option disabled selected value>{{_userMysql.DATE_FORMAT}}</option>
+                                                            <option disabled value>Please select</option>
                                                             <option value="1">MM/dd/yyyy</option>
                                                             <option value="2">dd.MM.yyyy</option>
                                                         </select>
@@ -215,7 +216,9 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label for="Time_zone">Time zone </label>
+
                                                         <select disabled id="Time_zone" name="Time_zone " class="form-control">
+                                                            <option disabled selected value>{{_userMysql.TIME_ZONE}}</option>
                                                             <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
                                                             <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
                                                             <option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-10">(GMT-10:00) Hawaii</option>
@@ -248,7 +251,7 @@
                                                             <option timeZoneId="30" gmtAdjustment="GMT+00:00" useDaylightTime="1" value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon,
                                                                 London
                                                             </option>
-                                                            <option timeZoneId="31" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1" selected>(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+                                                            <option timeZoneId="31" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
                                                             <option timeZoneId="32" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
                                                             <option timeZoneId="33" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
                                                             <option timeZoneId="34" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
@@ -308,8 +311,9 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label for="Time_format">Time format </label>
-                                                        <select disabled id="Time_formatTime_format" name="Time_format " class="form-control">
-                                                            <option disabled selected value>Please select</option>
+                                                        <select disabled id="Time_format" name="Time_format " class="form-control">
+                                                            <option disabled selected value>{{_userMysql.TIME_FORMAT}}</option>
+                                                            <option disabled value>Please select</option>
                                                             <option value="1">24 hours (hh:mm)</option>
                                                             <option value="2">12 hours (hh:mm a.m./p.m.)</option>
                                                         </select>
@@ -323,7 +327,7 @@
                                                         <div style="display: table; width:100%;">
                                                             <div style="display: table-cell; vertical-align: middle;">
                                                                 <div style="float: left;">
-                                                                    <input disabled type="file" id="Logo" name="Logo">
+                                                                    <input ngModel disabled type="file" id="Logo" name="Logo">
                                                                 </div>
                                                                 <div style="float: right;">
                                                                     <style>
@@ -332,7 +336,7 @@
                                                                             border: solid 1px #1CBCD8;
                                                                         }
                                                                     </style>
-                                                                    <img class="dropshadowclass" id="Logo_preview" height="120" width="120" src="http://placehold.it/120x120" alt="your Logo" />
+                                                                    <img class="dropshadowclass" id="Logo_preview" height="120" width="120" src="{{_userMysql.LOGO}}" alt="your Logo" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -347,12 +351,7 @@
                                 <button class="btn btn-raised btn-info mr-1" type="button" id="Edit1">
                                     <i class="fa fa-edit"></i> Edit
                                 </button>
-                                <button class="btn btn-raised btn-danger mr-1" type="button" id="Cancel1">
-                                    <i class="ft-x"></i> Cancel
-                                </button>
-                                <button class="btn btn-raised btn-warning mr-1" type="button" id="Clear1">
-                                    <i class="ft-x"></i> Clear
-                                </button>
+
                                 <button class="btn btn-raised btn-primary" type="button" id="Save">
                                     <i class="fa fa-check-square-o"></i> Save
                                 </button>

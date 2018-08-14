@@ -1,0 +1,59 @@
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Content-Type: application/json; charset=utf8");
+$conn = new mysqli("localhost","root","toor","test");
+$data = json_decode(file_get_contents("php://input"));
+$COMPANY_NAME= mysqli_real_escape_string($data->COMPANY_NAME);
+$COMPANYCODE= mysqli_real_escape_string($data->COMPANYCODE);
+$STREET= mysqli_real_escape_string($data->STREET);
+$CITY= mysqli_real_escape_string($data->CITY);
+$POSTAL_CODE= mysqli_real_escape_string($data->POSTAL_CODE);
+$COUNTRY= mysqli_real_escape_string($data->COUNTRY);
+$FULL_NAME_LEGACY= mysqli_real_escape_string($data->FULL_NAME_LEGACY);
+$VAT_NUMBER= mysqli_real_escape_string($data->VAT_NUMBER);
+$IATA_NUMBER= mysqli_real_escape_string($data->IATA_NUMBER);
+$TITLE= mysqli_real_escape_string($data->TITLE);
+$FIRST_NAME= mysqli_real_escape_string($data->FIRST_NAME);
+$MIDDLE_NAME= mysqli_real_escape_string($data->MIDDLE_NAME);
+$LAST_NAME= mysqli_real_escape_string($data->LAST_NAME);
+$PHONE1= mysqli_real_escape_string($data->PHONE1);
+$PHONE2= mysqli_real_escape_string($data->PHONE2);
+$FAX= mysqli_real_escape_string($data->FAX);
+$WEBSITE= mysqli_real_escape_string($data->WEBSITE);
+$EMAIL= mysqli_real_escape_string($data->EMAIL);
+$LANGUAGE= mysqli_real_escape_string($data->LANGUAGE);
+$PRICE_FORMAT= mysqli_real_escape_string($data->PRICE_FORMAT);
+$DATE_FORMAT= mysqli_real_escape_string($data->DATE_FORMAT);
+$TIME_ZONE= mysqli_real_escape_string($data->TIME_ZONE);
+$TIME_FORMAT= mysqli_real_escape_string($data->TIME_FORMAT);
+$LOGO= mysqli_real_escape_string($data->LOGO);
+$query =  "UPDATE employees SET
+`COMPANY_NAME`='$COMPANY_NAME',
+`COMPANYCODE`='$COMPANYCODE',
+`STREET`='$STREET',
+`CITY`='$CITY',
+`POSTAL_CODE`='$POSTAL_CODE',
+`COUNTRY`='$COUNTRY',
+`FULL_NAME_LEGACY`='$FULL_NAME_LEGACY',
+`VAT_NUMBER`='$VAT_NUMBER',
+`IATA_NUMBER`='$IATA_NUMBER',
+`TITLE`='$TITLE',
+`FIRST_NAME`='$FIRST_NAME',
+`MIDDLE_NAME`='$MIDDLE_NAME',
+`LAST_NAME`='$LAST_NAME',
+`PHONE1`='$PHONE1',
+`PHONE2`='$PHONE2',
+`FAX`='$FAX',
+`WEBSITE`='$WEBSITE',
+`EMAIL`='$EMAIL',
+`LANGUAGE`='$LANGUAGE',
+`PRICE_FORMAT`='$PRICE_FORMAT',
+`DATE_FORMAT`='$DATE_FORMAT',
+`TIME_ZONE`='$TIME_ZONE',
+`TIME_FORMAT`='$TIME_FORMAT',
+`LOGO`='$LOGO',
+        WHERE COMPANYCODE = $COMPANYCODE ";
+$result = $conn->query($query);
+$conn->close();

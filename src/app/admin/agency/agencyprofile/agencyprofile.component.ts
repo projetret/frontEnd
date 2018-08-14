@@ -1,75 +1,41 @@
 import { Component, OnInit } from '@angular/core';
+import { Agency } from './agencyprofile';
+import { AgencyMysqlService } from './agencymysql.service';
 
 @Component({
-    selector: 'app-agencyprofile',
-    templateUrl: './agencyprofile.component.html',
-    styleUrls: ['./agencyprofile.component.scss']
+  moduleId: module.id,
+  selector: 'app-agencyprofile',
+  templateUrl: './agencyprofile.component.html',
+  styleUrls: ['./agencyprofile.component.scss']
 })
 export class AgencyprofileComponent implements OnInit {
-
-    constructor() { }
-
-    ngOnInit() {
-        // Edit
-
-        $('#Edit').click(function (event) {
-            event.preventDefault();
-            $('#agency_profile input, #agency_profile select').prop('disabled', false); // Element(s) are now enabled.
-            // $('#company').prop('disabled', true);
-            $('#company,#vat').attr('disabled', 'disabled');
-        });
-        // Cancel
-        $('#Cancel').on('click', function () {
-            $('#agency_profile').trigger('reset');
-        });
-        // Clear
-
-        $('#Clear').on('click', function () {
-            $('#agency_profile').find('input:text, input:password, select, textarea').val('');
-            $('#agency_profile input, #agency_profile select').attr('placeholder', '');
-            $('#agency_profile').find('input:radio, input:checkbox').prop('checked', false);
-            $('#company').attr('placeholder', 'Enter your company name');
-            $('#vat').attr('placeholder', 'EPL1234567890');
-
-        });
-        $('#Edit1').click(function (event) {
-            event.preventDefault();
-            $('#agency_profile input, #agency_profile select').prop('disabled', false); // Element(s) are now enabled.
-            // $('#company').prop('disabled', true);
-            $('#company,#vat').attr('disabled', 'disabled');
-        });
-        // Cancel
-        $('#Cancel1').on('click', function () {
-            $('#agency_profile').trigger('reset');
-        });
-        // Clear
-
-        $('#Clear1').on('click', function () {
-            $('#agency_profile').find('input:text, input:password, select, textarea').val('');
-            $('#agency_profile input, #agency_profile select').attr('placeholder', '');
-            $('#agency_profile').find('input:radio, input:checkbox').prop('checked', false);
-            $('#company').attr('placeholder', 'Enter your company name');
-            $('#vat').attr('placeholder', 'EPL1234567890');
-
-        });
-        // img upload
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-
-                const reader = new FileReader();
-
-                reader.onload = function (e) {
-                    $('#Logo_preview').attr('src', this.result);
-                };
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-
-        $('#Logo').change(function () {
-            readURL(this);
-        });
-
+  agencyMysql: Agency[];
+  constructor(private _mysqlService: AgencyMysqlService) {}
+  ngOnInit() {
+    this.getUsersMysql();
+  }
+  // tslint:disable-next-line:max-line-length
+  addUser(USER_ID: number, COMPANYCODE: string, EMAIL: string, REG_DATE: string, FIRST_NAME: string, MIDDLE_NAME: string, LAST_NAME: string, SALT: string, PASSWORD: string, ROLECODE: string, COMPANY_NAME: string, STREET: string, CITY: string, POSTAL_CODE: number, COUNTRY: string, FULL_NAME_LEGACY: string, VAT_NUMBER: string, IATA_NUMBER: string, TITLE: string, PHONE1: number, PHONE2: number, FAX: number, WEBSITE: string, LANGUAGE: string, PRICE_FORMAT: string, DATE_FORMAT: string, TIME_ZONE: string, TIME_FORMAT: string, LOGO: string) {
+    // tslint:disable-next-line:max-line-length
+    if (this._mysqlService.addMysqlUserDatas(USER_ID, COMPANYCODE, EMAIL, REG_DATE, FIRST_NAME, MIDDLE_NAME, LAST_NAME, SALT, PASSWORD, ROLECODE, COMPANY_NAME, STREET, CITY, POSTAL_CODE, COUNTRY, FULL_NAME_LEGACY, VAT_NUMBER, IATA_NUMBER, TITLE, PHONE1, PHONE2, FAX, WEBSITE, LANGUAGE, PRICE_FORMAT, DATE_FORMAT, TIME_ZONE, TIME_FORMAT, LOGO)) {
+      alert('Data Inserted Successfully');
     }
+  }
+  // tslint:disable-next-line:max-line-length
+  UpdateProfile(COMPANY_NAME: string, COMPANYCODE: string, STREET: string, CITY: string, POSTAL_CODE: number, COUNTRY: string, FULL_NAME_LEGACY: string, VAT_NUMBER: string, IATA_NUMBER: string, TITLE: string, FIRST_NAME: string, MIDDLE_NAME: string, LAST_NAME: string, PHONE1: number, PHONE2: number, FAX: number, WEBSITE: string, EMAIL: string, LANGUAGE: string, PRICE_FORMAT: string, DATE_FORMAT: string, TIME_ZONE: string, TIME_FORMAT: string, LOGO: string ) {
+    // tslint:disable-next-line:max-line-length
+    if (this._mysqlService.UpdateMysqlProfileDatas(COMPANY_NAME, COMPANYCODE, STREET, CITY, POSTAL_CODE, COUNTRY, FULL_NAME_LEGACY, VAT_NUMBER, IATA_NUMBER, TITLE, FIRST_NAME, MIDDLE_NAME, LAST_NAME, PHONE1, PHONE2, FAX, WEBSITE, EMAIL, LANGUAGE, PRICE_FORMAT, DATE_FORMAT, TIME_ZONE, TIME_FORMAT, LOGO )) {
+      alert('Profile Updated Successfully');
+    }
+  }
+  private getUsersMysql() {
+    this._mysqlService
+      .getMysqlUsersDatas()
+      .subscribe(
+        res => (this.agencyMysql = res),
+        err => console.error(err.status)
+      );
+  }
 }
+
 

@@ -7,14 +7,14 @@ header("Content-Type: application/json; charset=UTF-8");
 getUsers();
 
 function getUsers(){
-    $conn = new mysqli("localhost","root","toor","api");
-    $result = $conn->query("SELECT * FROM users");
+    $conn = new mysqli("localhost","root","toor","test");
+    $result = $conn->query("SELECT * FROM agent");
 
     $user = array();
 
     while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
         array_push($user,array(
-        
+        '_id'=>$rs["_id"],
 'Companycode'=>$rs["Companycode"],
 'Image'=>$rs["Image"],
 'Login'=>$rs["Login"],

@@ -15,19 +15,19 @@ import { FullLayoutComponent } from './layouts/full/full-layout.component';
 import { AuthService } from './auth/auth.service';
 import { UserService } from './auth/user.service';
 import { AuthGuard } from './auth/auth.guard';
-import {MysqlService} from './admin/agency/users/mysql.service';
+import { MysqlService} from './admin/agency/users/mysql.service';
+import { AgencyMysqlService } from './admin/agency/agencyprofile/agencymysql.service';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import * as $ from 'jquery';
 export const createTranslateLoader = (http: HttpClient) => {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 };
 @NgModule({
-  declarations: [
-    AppComponent,
-    FullLayoutComponent,
-    ContentLayoutComponent
-  ],
+  declarations: [AppComponent, FullLayoutComponent, ContentLayoutComponent],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     BrowserModule,
     FormsModule,
@@ -45,7 +45,13 @@ export const createTranslateLoader = (http: HttpClient) => {
     AuthModule,
     NgbModule.forRoot()
   ],
-  providers: [MysqlService, AuthService, UserService, AuthGuard],
+  providers: [
+    AgencyMysqlService,
+    MysqlService,
+    AuthService,
+    UserService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

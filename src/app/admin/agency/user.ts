@@ -1,7 +1,7 @@
 
 export class User {
 
-Companycode:	number ;
+_id:	number ;
 Image:  string;
 Login: string;
 Name: string;

@@ -3,7 +3,7 @@
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'toor');
-define('DB_DATABASE', 'ret');
+define('DB_DATABASE', 'test');
 $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 // Check connection
 if ($conn === false) {
@@ -25,12 +25,12 @@ if (isset($_POST) && !empty($_POST)) {
     $CompanyCode = $_POST['CompanyCode'];
     $inputEmail = $_POST['inputEmail'];
     $inputPass = $_POST['inputPass'];
-    $sql = "SELECT *FROM users WHERE email='$inputEmail'";
+    $sql = "SELECT *FROM users WHERE EMAIL='$inputEmail'";
     $result = mysqli_query($conn, $sql) or die(mysql_error());
     $row = mysqli_fetch_assoc($result);
-    $hashed_pass = crypt($inputPass, $Blowfish_Pre . $row['salt'] . $Blowfish_End);
-    if (($hashed_pass == $row['password']) && ($CompanyCode == $row['Companycode'])) {
-        $_SESSION['Companycode'] = $row['Companycode'];
+    $hashed_pass = crypt($inputPass, $Blowfish_Pre . $row['SALT'] . $Blowfish_End);
+    if (($hashed_pass == $row['PASSWORD']) && ($CompanyCode == $row['COMPANYCODE'])) {
+        $_SESSION['Companycode'] = $row['COMPANYCODE'];
         $_SESSION['user'] = 'admin';
         ?>
 						{

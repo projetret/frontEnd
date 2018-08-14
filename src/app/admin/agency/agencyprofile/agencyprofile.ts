@@ -1,0 +1,31 @@
+export class Agency {
+    USER_ID: number;
+    COMPANYCODE: string;
+    EMAIL: string;
+    REG_DATE: string;
+    FIRST_NAME: string;
+    MIDDLE_NAME: string;
+    LAST_NAME: string;
+    SALT: string;
+    PASSWORD: string;
+    ROLECODE: string;
+    COMPANY_NAME: string;
+    STREET: string;
+    CITY: string;
+    POSTAL_CODE: number;
+    COUNTRY: string;
+    FULL_NAME_LEGACY: string;
+    VAT_NUMBER: string;
+    IATA_NUMBER: string;
+    TITLE: string;
+    PHONE1: number;
+    PHONE2: number;
+    FAX: number;
+    WEBSITE: string;
+    LANGUAGE: string;
+    PRICE_FORMAT: string;
+    DATE_FORMAT: string;
+    TIME_ZONE: string;
+    TIME_FORMAT: string;
+    LOGO: string;
+}
