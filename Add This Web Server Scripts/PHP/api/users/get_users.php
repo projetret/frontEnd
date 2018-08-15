@@ -8,7 +8,7 @@ getUsers();
 
 function getUsers(){
     $conn = new mysqli("localhost","root","toor","test");
-    $result = $conn->query("SELECT * FROM agent");
+    $result = $conn->query("SELECT * FROM agents");
 
     $user = array();
 
