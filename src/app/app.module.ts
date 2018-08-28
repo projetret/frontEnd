@@ -17,6 +17,7 @@ import { UserService } from './auth/user.service';
 import { AuthGuard } from './auth/auth.guard';
 import { MysqlService} from './admin/agency/users/mysql.service';
 import { AgencyMysqlService } from './admin/agency/agencyprofile/agencymysql.service';
+import {ClientMysqlService} from './admin/client/clientmysql.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import * as $ from 'jquery';
@@ -46,6 +47,7 @@ export const createTranslateLoader = (http: HttpClient) => {
     NgbModule.forRoot()
   ],
   providers: [
+    ClientMysqlService,
     AgencyMysqlService,
     MysqlService,
     AuthService,

@@ -10,16 +10,17 @@
                                 <small> Client</small>
                             </div>
                             <div style="float: right;margin: auto;">
-                                <button class="btn btn-raised btn-info mr-1" type="button" id="Edit" onclick="
+                                <!--                                 <button class="btn btn-raised btn-info mr-1" type="button" id="Edit" onclick="
                                 event.preventDefault();
- $('#privateclientprivateclient input, #privateclient select').prop('disabled', false);
+                                $('#new_agency input, #new_agency select').prop('disabled', false);
                                 $('#company_name').prop('disabled', true);
-                                $('#privateclient,#companycode').attr('disabled', 'disabled');">
-                  <i class="fa fa-plus-circle"></i> New
-                </button>
-                                <button class="btn btn-raised btn-primary" type="button" id="Save">
-                  <i class="fa fa-check-square-o"></i> Save
-                </button>
+                                $('#company_name,#companycode').attr('disabled', 'disabled');">
+<i class="fa fa-plus-circle"></i> New
+                </button> -->
+                                <button class="btn btn-raised btn-primary" type="button" id="Save" (click)="addClient(company_name.value,companycode.value,street.value,city.value,postal_code.value,country.value,Full_name_legacy.value,VAT_number.value,IATA_number.value,Title.value,First_name.value,Middle_name.value,Last_name.value,Phone1.value,Phone2.value,Fax.value,WebSite.value,Email.value)">
+        <!--   -->
+        <i class="fa fa-check-square-o"></i> Save
+    </button>
                             </div>
                         </div>
                     </div>
@@ -35,30 +36,30 @@
                                         <div class="card-body">
                                             <div class="form-group">
                                                 <label for="company_name">Company</label>
-                                                <input type="text" class="form-control" id="company_name" value="{{COMPANY_NAME}}" autocomplete='company'>
+                                                <input #company_name type="text" class="form-control" id="company_name" autocomplete='company'>
                                             </div>
                                             <div class="form-group">
                                                 <label for="companycode">TRADE REGISTER NUMBER *</label>
-                                                <input type="text" class="form-control" id="companycode" value="{{COMPANYCODE}}">
+                                                <input #companycode type="text" class="form-control" id="companycode">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="street">Street</label>
-                                                <input #street type="text" class=" form-control " id="street " value="{{STREET}}" autocomplete='address-line1'>
+                                                <input #street type="text" class=" form-control " id="street" autocomplete='address-line1'>
                                             </div>
                                             <div class="row">
                                                 <div class="form-group col-sm-8">
                                                     <label for="city">City</label>
-                                                    <input #city type="text" class="form-control" id="city" value="{{CITY}}" autocomplete='address-level2'>
+                                                    <input #city type="text" class="form-control" id="city" autocomplete='address-level2'>
                                                 </div>
                                                 <div class="form-group col-sm-4">
                                                     <label for="postal_code">Postal Code</label>
-                                                    <input #postal_code type="text" class="form-control" id="postal_code" value="{{POSTAL_CODE}}" autocomplete='postal-code'>
+                                                    <input #postal_code type="text" class="form-control" id="postal_code" autocomplete='postal-code'>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="country">Country</label>
-                                                <input #country type="text" class="form-control" id="country" value="{{COUNTRY}}" autocomplete='country-name'>
+                                                <input #country type="text" class="form-control" id="country" autocomplete='country-name'>
                                             </div>
                                         </div>
                                     </div>
@@ -72,251 +73,15 @@
                                         <div class="card-body">
                                             <div class="form-group">
                                                 <label for="Full_name_legacy">Full name of legal entity</label>
-                                                <input #Full_name_legacy type="text" class="form-control" id="Full_name_legacy" value="{{FULL_NAME_LEGACY}}" autocomplete='name'>
+                                                <input #Full_name_legacy type="text" class="form-control" id="Full_name_legacy" autocomplete='name'>
                                             </div>
                                             <div class="form-group">
                                                 <label for="VAT_number">VAT number*</label>
-                                                <input #VAT_number type="text" class="form-control" id="VAT_number" value="{{VAT_NUMBER}}">
+                                                <input #VAT_number type="text" class="form-control" id="VAT_number">
                                             </div>
                                             <div class="form-group">
                                                 <label for="IATA_number">IATA number*</label>
-                                                <input #IATA_number type="number" class="form-control" id="IATA_number" value="{{IATA_NUMBER}}">
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <strong>Contact</strong>
-                                            <small> Person</small>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label for="Title">Title </label>
-                                                        <select #Title id="Title" name="Title" class="form-control" autocomplete='title'>
-                              <option selected value="{{TITLE}}">{{TITLE}}</option>
-                              <option disabled>Please select</option>
-                              <option value="Mr">Mr</option>
-                              <option value="Miss">Miss</option>
-                              <option value="Mme">Mme</option>
-                            </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label for="First_name">First name</label>
-                                                        <input #First_name type="text" class="form-control" id="First_name" value="{{FIRST_NAME}}" autocomplete='given-name'>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label for="Middle_name">Middle name</label>
-                                                        <input #Middle_name type="text" class="form-control" id="Middle_name" value="{{MIDDLE_NAME}}" autocomplete='additional-name'>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label for="Last_name">Last name</label>
-                                                        <input #Last_name type="text" class="form-control" id="Last_name" value="{{LAST_NAME}}" autocomplete='family-name'>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="form-group col-sm-4">
-                                                    <label for="Phone1">Phone 1 *</label>
-                                                    <input #Phone1 type="text" class="form-control" id="Phone1" value="{{PHONE1}}" autocomplete='tel'>
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label for="Phone2">Phone 2</label>
-                                                    <input #Phone2 type="text" class="form-control" id="Phone2" value="{{PHONE2}}" autocomplete='tel2'>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="form-group">
-                                                        <label for="Fax">Fax *</label>
-                                                        <input #Fax type="text" class="form-control" id="Fax" value="{{FAX}}" autocomplete='tel-national'>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="form-group col-sm-12">
-                                                    <label for="WebSite">Web site URL *</label>
-                                                    <input #WebSite type="text" class="form-control" id="WebSite" value="{{WEBSITE}}">
-                                                </div>
-                                                <div class="form-group col-sm-12">
-                                                    <label for="Email">E-mail *</label>
-                                                    <input #Email type="text" class="form-control" id="Email" value="{{EMAIL}}" autocomplete='email'>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--    card               -->
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <strong>Profile </strong>
-                                            <small>settings</small>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label for="Language">Language</label>
-                                                        <select #Language id="Language" name="Language" class="form-control">
-                              <option selected value="{{LANGUAGE}}">{{LANGUAGE}}</option>
-                              <option disabled>Please select</option>
-                              <option value="English">English</option>
-                              <option value="French">French</option>
-                            </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label for="Price_format">Price format </label>
-                                                        <select #Priceformat id="Price_format" name="Price_format " class="form-control">
-                              <option selected value="{{PRICE_FORMAT}}">{{PRICE_FORMAT}}</option>
-                              <option disabled>Please select</option>
-                              <option value="1000000.000">1000000.000</option>
-                              <option value="1 000 000.00">1 000 000.00</option>
-                              <option value="1,000,000.00">1,000,000.00</option>
-                              <option value="1000000,00">1000000,00</option>
-                            </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label for="Date_format">Date format </label>
-                                                        <select #Dateformat id="Date_format" name="Date_format " class="form-control">
-                              <option selected value="{{DATE_FORMAT}}">{{DATE_FORMAT}}</option>
-                              <option disabled>Please select</option>
-                              <option value="MM/dd/yyyy">MM/dd/yyyy</option>
-                              <option value="dd.MM.yyyy">dd.MM.yyyy</option>
-                            </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label for="Time_zone">Time zone </label>
-
-                                                        <select #Timezone id="Time_zone" name="Time_zone " class="form-control">
-                              <option selected value="{{TIME_ZONE}}">{{TIME_ZONE}}</option>
-                              <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="(GMT-12:00) International Date Line West">(GMT-12:00) International Date Line West</option>
-                              <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="(GMT-11:00) Midway Island, Samoa">(GMT-11:00) Midway Island, Samoa</option>
-                              <option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="(GMT-10:00) Hawaii">(GMT-10:00) Hawaii</option>
-                              <option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="(GMT-09:00) Alaska">(GMT-09:00) Alaska</option>
-                              <option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="(GMT-08:00) Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
-                              <option timeZoneId="6" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="(GMT-08:00) Tijuana, Baja California">(GMT-08:00) Tijuana, Baja California</option>
-                              <option timeZoneId="7" gmtAdjustment="GMT-07:00" useDaylightTime="0" value="(GMT-07:00) Arizona">(GMT-07:00) Arizona</option>
-                              <option timeZoneId="8" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="(GMT-07:00) Chihuahua, La Paz, Mazatlan">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
-                              <option timeZoneId="9" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="(GMT-07:00) Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
-                              <option timeZoneId="10" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="(GMT-06:00) Central America">(GMT-06:00) Central America</option>
-                              <option timeZoneId="11" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="(GMT-06:00) Central Time (US &amp; Canada)">(GMT-06:00) Central Time (US &amp; Canada)</option>
-                              <option timeZoneId="12" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="(GMT-06:00) Guadalajara, Mexico City, Monterrey">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
-                              <option timeZoneId="13" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="(GMT-06:00) Saskatchewan">(GMT-06:00) Saskatchewan</option>
-                              <option timeZoneId="14" gmtAdjustment="GMT-05:00" useDaylightTime="0" value="(GMT-05:00) Bogota, Lima, Quito, Rio Branco">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
-                              <option timeZoneId="15" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="(GMT-05:00) Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
-                              <option timeZoneId="16" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="(GMT-05:00) Indiana (East)">(GMT-05:00) Indiana (East)</option>
-                              <option timeZoneId="17" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="(GMT-04:00) Atlantic Time (Canada)">(GMT-04:00) Atlantic Time (Canada)</option>
-                              <option timeZoneId="18" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="(GMT-04:00) Caracas, La Paz">(GMT-04:00) Caracas, La Paz</option>
-                              <option timeZoneId="19" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="(GMT-04:00) Manaus">(GMT-04:00) Manaus</option>
-                              <option timeZoneId="20" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="(GMT-04:00) Santiago">(GMT-04:00) Santiago</option>
-                              <option timeZoneId="21" gmtAdjustment="GMT-03:30" useDaylightTime="1" value="(GMT-03:30) Newfoundland">(GMT-03:30) Newfoundland</option>
-                              <option timeZoneId="22" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="(GMT-03:00) Brasilia">(GMT-03:00) Brasilia</option>
-                              <option timeZoneId="23" gmtAdjustment="GMT-03:00" useDaylightTime="0" value="(GMT-03:00) Buenos Aires, Georgetown">(GMT-03:00) Buenos Aires, Georgetown</option>
-                              <option timeZoneId="24" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="(GMT-03:00) Greenland">(GMT-03:00) Greenland</option>
-                              <option timeZoneId="25" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="(GMT-03:00) Montevideo">(GMT-03:00) Montevideo</option>
-                              <option timeZoneId="26" gmtAdjustment="GMT-02:00" useDaylightTime="1" value="(GMT-02:00) Mid-Atlantic">(GMT-02:00) Mid-Atlantic</option>
-                              <option timeZoneId="27" gmtAdjustment="GMT-01:00" useDaylightTime="0" value="(GMT-01:00) Cape Verde Is.">(GMT-01:00) Cape Verde Is.</option>
-                              <option timeZoneId="28" gmtAdjustment="GMT-01:00" useDaylightTime="1" value="(GMT-01:00) Azores">(GMT-01:00) Azores</option>
-                              <option timeZoneId="29" gmtAdjustment="GMT+00:00" useDaylightTime="0" value="(GMT+00:00) Casablanca, Monrovia, Reykjavik">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
-                              <option timeZoneId="30" gmtAdjustment="GMT+00:00" useDaylightTime="1" value="(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon,London">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon,London</option>
-                              <option timeZoneId="31" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
-                              <option timeZoneId="32" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
-                              <option timeZoneId="33" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="(GMT+01:00) Brussels, Copenhagen, Madrid, Paris">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
-                              <option timeZoneId="34" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
-                              <option timeZoneId="35" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="(GMT+01:00) West Central Africa">(GMT+01:00) West Central Africa</option>
-                              <option timeZoneId="36" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Amman">(GMT+02:00) Amman</option>
-                              <option timeZoneId="37" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Athens, Bucharest, Istanbul">(GMT+02:00) Athens, Bucharest, Istanbul</option>
-                              <option timeZoneId="38" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Beirut">(GMT+02:00) Beirut</option>
-                              <option timeZoneId="39" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Cairo">(GMT+02:00) Cairo</option>
-                              <option timeZoneId="40" gmtAdjustment="GMT+02:00" useDaylightTime="0" value="(GMT+02:00) Harare, Pretoria">(GMT+02:00) Harare, Pretoria</option>
-                              <option timeZoneId="41" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
-                              <option timeZoneId="42" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Jerusalem">(GMT+02:00) Jerusalem</option>
-                              <option timeZoneId="43" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Minsk">(GMT+02:00) Minsk</option>
-                              <option timeZoneId="44" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Windhoek">(GMT+02:00) Windhoek</option>
-                              <option timeZoneId="45" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="(GMT+03:00) Kuwait, Riyadh, Baghdad">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
-                              <option timeZoneId="46" gmtAdjustment="GMT+03:00" useDaylightTime="1" value="(GMT+03:00) Moscow, St. Petersburg, Volgograd">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
-                              <option timeZoneId="47" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="(GMT+03:00) Nairobi">(GMT+03:00) Nairobi</option>
-                              <option timeZoneId="48" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="(GMT+03:00) Tbilisi">(GMT+03:00) Tbilisi</option>
-                              <option timeZoneId="49" gmtAdjustment="GMT+03:30" useDaylightTime="1" value="(GMT+03:30) Tehran">(GMT+03:30) Tehran</option>
-                              <option timeZoneId="50" gmtAdjustment="GMT+04:00" useDaylightTime="0" value="(GMT+04:00) Abu Dhabi, Muscat">(GMT+04:00) Abu Dhabi, Muscat</option>
-                              <option timeZoneId="51" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="(GMT+04:00) Baku">(GMT+04:00) Baku</option>
-                              <option timeZoneId="52" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="(GMT+04:00) Yerevan">(GMT+04:00) Yerevan</option>
-                              <option timeZoneId="53" gmtAdjustment="GMT+04:30" useDaylightTime="0" value="(GMT+04:30) Kabul">(GMT+04:30) Kabul</option>
-                              <option timeZoneId="54" gmtAdjustment="GMT+05:00" useDaylightTime="1" value="(GMT+05:00) Yekaterinburg">(GMT+05:00) Yekaterinburg</option>
-                              <option timeZoneId="55" gmtAdjustment="GMT+05:00" useDaylightTime="0" value="(GMT+05:00) Islamabad, Karachi, Tashkent">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
-                              <option timeZoneId="56" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="(GMT+05:30) Sri Jayawardenapura">(GMT+05:30) Sri Jayawardenapura</option>
-                              <option timeZoneId="57" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
-                              <option timeZoneId="58" gmtAdjustment="GMT+05:45" useDaylightTime="0" value="(GMT+05:45) Kathmandu">(GMT+05:45) Kathmandu</option>
-                              <option timeZoneId="59" gmtAdjustment="GMT+06:00" useDaylightTime="1" value="(GMT+06:00) Almaty, Novosibirsk">(GMT+06:00) Almaty, Novosibirsk</option>
-                              <option timeZoneId="60" gmtAdjustment="GMT+06:00" useDaylightTime="0" value="(GMT+06:00) Astana, Dhaka">(GMT+06:00) Astana, Dhaka</option>
-                              <option timeZoneId="61" gmtAdjustment="GMT+06:30" useDaylightTime="0" value="(GMT+06:30) Yangon (Rangoon)">(GMT+06:30) Yangon (Rangoon)</option>
-                              <option timeZoneId="62" gmtAdjustment="GMT+07:00" useDaylightTime="0" value="(GMT+07:00) Bangkok, Hanoi, Jakarta">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
-                              <option timeZoneId="63" gmtAdjustment="GMT+07:00" useDaylightTime="1" value="(GMT+07:00) Krasnoyarsk">(GMT+07:00) Krasnoyarsk</option>
-                              <option timeZoneId="64" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
-                              <option timeZoneId="65" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="(GMT+08:00) Kuala Lumpur, Singapore">(GMT+08:00) Kuala Lumpur, Singapore</option>
-                              <option timeZoneId="66" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="(GMT+08:00) Irkutsk, Ulaan Bataar">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
-                              <option timeZoneId="67" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="(GMT+08:00) Perth">(GMT+08:00) Perth</option>
-                              <option timeZoneId="68" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="(GMT+08:00) Taipei">(GMT+08:00) Taipei</option>
-                              <option timeZoneId="69" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="(GMT+09:00) Osaka, Sapporo, Tokyo">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
-                              <option timeZoneId="70" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="(GMT+09:00) Seoul">(GMT+09:00) Seoul</option>
-                              <option timeZoneId="71" gmtAdjustment="GMT+09:00" useDaylightTime="1" value="(GMT+09:00) Yakutsk">(GMT+09:00) Yakutsk</option>
-                              <option timeZoneId="72" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="(GMT+09:30) Adelaide">(GMT+09:30) Adelaide</option>
-                              <option timeZoneId="73" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="(GMT+09:30) Darwin">(GMT+09:30) Darwin</option>
-                              <option timeZoneId="74" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="(GMT+10:00) Brisbane">(GMT+10:00) Brisbane</option>
-                              <option timeZoneId="75" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="(GMT+10:00) Canberra, Melbourne, Sydney">(GMT+10:00) Canberra, Melbourne, Sydney</option>
-                              <option timeZoneId="76" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="(GMT+10:00) Hobart">(GMT+10:00) Hobart</option>
-                              <option timeZoneId="77" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="(GMT+10:00) Guam, Port Moresby">(GMT+10:00) Guam, Port Moresby</option>
-                              <option timeZoneId="78" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="(GMT+10:00) Vladivostok">(GMT+10:00) Vladivostok</option>
-                              <option timeZoneId="79" gmtAdjustment="GMT+11:00" useDaylightTime="1" value="(GMT+11:00) Magadan, Solomon Is., New Caledonia">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
-                              <option timeZoneId="80" gmtAdjustment="GMT+12:00" useDaylightTime="1" value="(GMT+12:00) Auckland, Wellington">(GMT+12:00) Auckland, Wellington</option>
-                              <option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="(GMT+12:00) Fiji, Kamchatka, Marshall Is.">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
-                              <option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="(GMT+13:00) Nuku'alofa">(GMT+13:00) Nuku'alofa</option>
-
-                            </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="form-group">
-                                                        <label for="Time_format">Time format </label>
-                                                        <select #Timeformat id="Time_format" name="Time_format " class="form-control">
-                              <option selected value="{{TIME_FORMAT}}">{{TIME_FORMAT}}</option>
-                              <option disabled>Please select</option>
-                              <option value="24 hours">24 hours (hh:mm)</option>
-                              <option value="12 hours">12 hours (hh:mm a.m./p.m.)</option>
-                            </select>
-                                                    </div>
-                                                </div>
+                                                <input #IATA_number type="number" class="form-control" id="IATA_number">
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-12">
@@ -341,21 +106,257 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <strong>Contact</strong>
+                                            <small> Person</small>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="Title">Title </label>
+                                                        <select #Title id="Title" name="Title" class="form-control" autocomplete='title'>
+                                        <option disabled>Please select</option>
+                                        <option value="Mr">Mr</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Mme">Mme</option>
+                                    </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="First_name">First name</label>
+                                                        <input #First_name type="text" class="form-control" id="First_name" autocomplete='given-name'>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="Middle_name">Middle name</label>
+                                                        <input #Middle_name type="text" class="form-control" id="Middle_name" autocomplete='additional-name'>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="Last_name">Last name</label>
+                                                        <input #Last_name type="text" class="form-control" id="Last_name" autocomplete='family-name'>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-sm-4">
+                                                    <label for="Phone1">Phone 1 *</label>
+                                                    <input #Phone1 type="text" class="form-control" id="Phone1" autocomplete='tel'>
+                                                </div>
+                                                <div class="form-group col-sm-4">
+                                                    <label for="Phone2">Phone 2</label>
+                                                    <input #Phone2 type="text" class="form-control" id="Phone2" autocomplete='tel2'>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <label for="Fax">Fax *</label>
+                                                        <input #Fax type="text" class="form-control" id="Fax" autocomplete='tel-national'>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-sm-12">
+                                                    <label for="WebSite">Web site URL *</label>
+                                                    <input #WebSite type="text" class="form-control" id="WebSite">
+                                                </div>
+                                                <div class="form-group col-sm-12">
+                                                    <label for="Email">E-mail *</label>
+                                                    <input #Email type="text" class="form-control" id="Email" autocomplete='email'>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--    card               -->
+                                </div>
+                                <!-- <div class="col-md-6"> -->
+                                <!-- <div class="card"> -->
+                                <!-- <div class="card-header"> -->
+                                <!-- <strong>Profile </strong> -->
+                                <!-- <small>settings</small> -->
+                                <!-- </div> -->
+                                <!-- <div class="card-body"> -->
+                                <!-- <div class="row"> -->
+                                <!-- <div class="col-sm-12"> -->
+                                <!-- <div class="form-group"> -->
+                                <!-- <label for="Language">Language</label> -->
+                                <!-- <select #Language id="Language" name="Language" class="form-control"> -->
+                                <!-- <option selected value="{{LANGUAGE}}">{{LANGUAGE}}</option> -->
+                                <!-- <option disabled>Please select</option> -->
+                                <!-- <option value="English">English</option> -->
+                                <!-- <option value="French">French</option> -->
+                                <!-- </select> -->
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- <div class="row"> -->
+                                <!-- <div class="col-sm-12"> -->
+                                <!-- <div class="form-group"> -->
+                                <!-- <label for="Price_format">Price format </label> -->
+                                <!-- <select #Priceformat id="Price_format" name="Price_format " class="form-control"> -->
+                                <!-- <option selected value="{{PRICE_FORMAT}}">{{PRICE_FORMAT}}</option> -->
+                                <!-- <option disabled>Please select</option> -->
+                                <!-- <option value="1000000.000">1000000.000</option> -->
+                                <!-- <option value="1 000 000.00">1 000 000.00</option> -->
+                                <!-- <option value="1,000,000.00">1,000,000.00</option> -->
+                                <!-- <option value="1000000,00">1000000,00</option> -->
+                                <!-- </select> -->
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- <div class="row"> -->
+                                <!-- <div class="col-sm-12"> -->
+                                <!-- <div class="form-group"> -->
+                                <!-- <label for="Date_format">Date format </label> -->
+                                <!-- <select #Dateformat id="Date_format" name="Date_format " class="form-control"> -->
+                                <!-- <option selected value="{{DATE_FORMAT}}">{{DATE_FORMAT}}</option> -->
+                                <!-- <option disabled>Please select</option> -->
+                                <!-- <option value="MM/dd/yyyy">MM/dd/yyyy</option> -->
+                                <!-- <option value="dd.MM.yyyy">dd.MM.yyyy</option> -->
+                                <!-- </select> -->
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- <div class="row"> -->
+                                <!-- <div class="col-sm-12"> -->
+                                <!-- <div class="form-group"> -->
+                                <!-- <label for="Time_zone">Time zone </label> -->
+
+                                <!-- <select #Timezone id="Time_zone" name="Time_zone " class="form-control"> -->
+                                <!-- <option selected value="{{TIME_ZONE}}">{{TIME_ZONE}}</option> -->
+                                <!-- <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="(GMT-12:00) International Date Line West">(GMT-12:00) International Date Line West</option> -->
+                                <!-- <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="(GMT-11:00) Midway Island, Samoa">(GMT-11:00) Midway Island, Samoa</option> -->
+                                <!-- <option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="(GMT-10:00) Hawaii">(GMT-10:00) Hawaii</option> -->
+                                <!-- <option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="(GMT-09:00) Alaska">(GMT-09:00) Alaska</option> -->
+                                <!-- <option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="(GMT-08:00) Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option> -->
+                                <!-- <option timeZoneId="6" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="(GMT-08:00) Tijuana, Baja California">(GMT-08:00) Tijuana, Baja California</option> -->
+                                <!-- <option timeZoneId="7" gmtAdjustment="GMT-07:00" useDaylightTime="0" value="(GMT-07:00) Arizona">(GMT-07:00) Arizona</option> -->
+                                <!-- <option timeZoneId="8" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="(GMT-07:00) Chihuahua, La Paz, Mazatlan">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option> -->
+                                <!-- <option timeZoneId="9" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="(GMT-07:00) Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option> -->
+                                <!-- <option timeZoneId="10" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="(GMT-06:00) Central America">(GMT-06:00) Central America</option> -->
+                                <!-- <option timeZoneId="11" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="(GMT-06:00) Central Time (US &amp; Canada)">(GMT-06:00) Central Time (US &amp; Canada)</option> -->
+                                <!-- <option timeZoneId="12" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="(GMT-06:00) Guadalajara, Mexico City, Monterrey">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option> -->
+                                <!-- <option timeZoneId="13" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="(GMT-06:00) Saskatchewan">(GMT-06:00) Saskatchewan</option> -->
+                                <!-- <option timeZoneId="14" gmtAdjustment="GMT-05:00" useDaylightTime="0" value="(GMT-05:00) Bogota, Lima, Quito, Rio Branco">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option> -->
+                                <!-- <option timeZoneId="15" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="(GMT-05:00) Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option> -->
+                                <!-- <option timeZoneId="16" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="(GMT-05:00) Indiana (East)">(GMT-05:00) Indiana (East)</option> -->
+                                <!-- <option timeZoneId="17" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="(GMT-04:00) Atlantic Time (Canada)">(GMT-04:00) Atlantic Time (Canada)</option> -->
+                                <!-- <option timeZoneId="18" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="(GMT-04:00) Caracas, La Paz">(GMT-04:00) Caracas, La Paz</option> -->
+                                <!-- <option timeZoneId="19" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="(GMT-04:00) Manaus">(GMT-04:00) Manaus</option> -->
+                                <!-- <option timeZoneId="20" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="(GMT-04:00) Santiago">(GMT-04:00) Santiago</option> -->
+                                <!-- <option timeZoneId="21" gmtAdjustment="GMT-03:30" useDaylightTime="1" value="(GMT-03:30) Newfoundland">(GMT-03:30) Newfoundland</option> -->
+                                <!-- <option timeZoneId="22" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="(GMT-03:00) Brasilia">(GMT-03:00) Brasilia</option> -->
+                                <!-- <option timeZoneId="23" gmtAdjustment="GMT-03:00" useDaylightTime="0" value="(GMT-03:00) Buenos Aires, Georgetown">(GMT-03:00) Buenos Aires, Georgetown</option> -->
+                                <!-- <option timeZoneId="24" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="(GMT-03:00) Greenland">(GMT-03:00) Greenland</option> -->
+                                <!-- <option timeZoneId="25" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="(GMT-03:00) Montevideo">(GMT-03:00) Montevideo</option> -->
+                                <!-- <option timeZoneId="26" gmtAdjustment="GMT-02:00" useDaylightTime="1" value="(GMT-02:00) Mid-Atlantic">(GMT-02:00) Mid-Atlantic</option> -->
+                                <!-- <option timeZoneId="27" gmtAdjustment="GMT-01:00" useDaylightTime="0" value="(GMT-01:00) Cape Verde Is.">(GMT-01:00) Cape Verde Is.</option> -->
+                                <!-- <option timeZoneId="28" gmtAdjustment="GMT-01:00" useDaylightTime="1" value="(GMT-01:00) Azores">(GMT-01:00) Azores</option> -->
+                                <!-- <option timeZoneId="29" gmtAdjustment="GMT+00:00" useDaylightTime="0" value="(GMT+00:00) Casablanca, Monrovia, Reykjavik">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option> -->
+                                <!-- <option timeZoneId="30" gmtAdjustment="GMT+00:00" useDaylightTime="1" value="(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon,London">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon,London</option> -->
+                                <!-- <option timeZoneId="31" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option> -->
+                                <!-- <option timeZoneId="32" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option> -->
+                                <!-- <option timeZoneId="33" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="(GMT+01:00) Brussels, Copenhagen, Madrid, Paris">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option> -->
+                                <!-- <option timeZoneId="34" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option> -->
+                                <!-- <option timeZoneId="35" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="(GMT+01:00) West Central Africa">(GMT+01:00) West Central Africa</option> -->
+                                <!-- <option timeZoneId="36" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Amman">(GMT+02:00) Amman</option> -->
+                                <!-- <option timeZoneId="37" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Athens, Bucharest, Istanbul">(GMT+02:00) Athens, Bucharest, Istanbul</option> -->
+                                <!-- <option timeZoneId="38" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Beirut">(GMT+02:00) Beirut</option> -->
+                                <!-- <option timeZoneId="39" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Cairo">(GMT+02:00) Cairo</option> -->
+                                <!-- <option timeZoneId="40" gmtAdjustment="GMT+02:00" useDaylightTime="0" value="(GMT+02:00) Harare, Pretoria">(GMT+02:00) Harare, Pretoria</option> -->
+                                <!-- <option timeZoneId="41" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option> -->
+                                <!-- <option timeZoneId="42" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Jerusalem">(GMT+02:00) Jerusalem</option> -->
+                                <!-- <option timeZoneId="43" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Minsk">(GMT+02:00) Minsk</option> -->
+                                <!-- <option timeZoneId="44" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="(GMT+02:00) Windhoek">(GMT+02:00) Windhoek</option> -->
+                                <!-- <option timeZoneId="45" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="(GMT+03:00) Kuwait, Riyadh, Baghdad">(GMT+03:00) Kuwait, Riyadh, Baghdad</option> -->
+                                <!-- <option timeZoneId="46" gmtAdjustment="GMT+03:00" useDaylightTime="1" value="(GMT+03:00) Moscow, St. Petersburg, Volgograd">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option> -->
+                                <!-- <option timeZoneId="47" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="(GMT+03:00) Nairobi">(GMT+03:00) Nairobi</option> -->
+                                <!-- <option timeZoneId="48" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="(GMT+03:00) Tbilisi">(GMT+03:00) Tbilisi</option> -->
+                                <!-- <option timeZoneId="49" gmtAdjustment="GMT+03:30" useDaylightTime="1" value="(GMT+03:30) Tehran">(GMT+03:30) Tehran</option> -->
+                                <!-- <option timeZoneId="50" gmtAdjustment="GMT+04:00" useDaylightTime="0" value="(GMT+04:00) Abu Dhabi, Muscat">(GMT+04:00) Abu Dhabi, Muscat</option> -->
+                                <!-- <option timeZoneId="51" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="(GMT+04:00) Baku">(GMT+04:00) Baku</option> -->
+                                <!-- <option timeZoneId="52" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="(GMT+04:00) Yerevan">(GMT+04:00) Yerevan</option> -->
+                                <!-- <option timeZoneId="53" gmtAdjustment="GMT+04:30" useDaylightTime="0" value="(GMT+04:30) Kabul">(GMT+04:30) Kabul</option> -->
+                                <!-- <option timeZoneId="54" gmtAdjustment="GMT+05:00" useDaylightTime="1" value="(GMT+05:00) Yekaterinburg">(GMT+05:00) Yekaterinburg</option> -->
+                                <!-- <option timeZoneId="55" gmtAdjustment="GMT+05:00" useDaylightTime="0" value="(GMT+05:00) Islamabad, Karachi, Tashkent">(GMT+05:00) Islamabad, Karachi, Tashkent</option> -->
+                                <!-- <option timeZoneId="56" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="(GMT+05:30) Sri Jayawardenapura">(GMT+05:30) Sri Jayawardenapura</option> -->
+                                <!-- <option timeZoneId="57" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option> -->
+                                <!-- <option timeZoneId="58" gmtAdjustment="GMT+05:45" useDaylightTime="0" value="(GMT+05:45) Kathmandu">(GMT+05:45) Kathmandu</option> -->
+                                <!-- <option timeZoneId="59" gmtAdjustment="GMT+06:00" useDaylightTime="1" value="(GMT+06:00) Almaty, Novosibirsk">(GMT+06:00) Almaty, Novosibirsk</option> -->
+                                <!-- <option timeZoneId="60" gmtAdjustment="GMT+06:00" useDaylightTime="0" value="(GMT+06:00) Astana, Dhaka">(GMT+06:00) Astana, Dhaka</option> -->
+                                <!-- <option timeZoneId="61" gmtAdjustment="GMT+06:30" useDaylightTime="0" value="(GMT+06:30) Yangon (Rangoon)">(GMT+06:30) Yangon (Rangoon)</option> -->
+                                <!-- <option timeZoneId="62" gmtAdjustment="GMT+07:00" useDaylightTime="0" value="(GMT+07:00) Bangkok, Hanoi, Jakarta">(GMT+07:00) Bangkok, Hanoi, Jakarta</option> -->
+                                <!-- <option timeZoneId="63" gmtAdjustment="GMT+07:00" useDaylightTime="1" value="(GMT+07:00) Krasnoyarsk">(GMT+07:00) Krasnoyarsk</option> -->
+                                <!-- <option timeZoneId="64" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option> -->
+                                <!-- <option timeZoneId="65" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="(GMT+08:00) Kuala Lumpur, Singapore">(GMT+08:00) Kuala Lumpur, Singapore</option> -->
+                                <!-- <option timeZoneId="66" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="(GMT+08:00) Irkutsk, Ulaan Bataar">(GMT+08:00) Irkutsk, Ulaan Bataar</option> -->
+                                <!-- <option timeZoneId="67" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="(GMT+08:00) Perth">(GMT+08:00) Perth</option> -->
+                                <!-- <option timeZoneId="68" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="(GMT+08:00) Taipei">(GMT+08:00) Taipei</option> -->
+                                <!-- <option timeZoneId="69" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="(GMT+09:00) Osaka, Sapporo, Tokyo">(GMT+09:00) Osaka, Sapporo, Tokyo</option> -->
+                                <!-- <option timeZoneId="70" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="(GMT+09:00) Seoul">(GMT+09:00) Seoul</option> -->
+                                <!-- <option timeZoneId="71" gmtAdjustment="GMT+09:00" useDaylightTime="1" value="(GMT+09:00) Yakutsk">(GMT+09:00) Yakutsk</option> -->
+                                <!-- <option timeZoneId="72" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="(GMT+09:30) Adelaide">(GMT+09:30) Adelaide</option> -->
+                                <!-- <option timeZoneId="73" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="(GMT+09:30) Darwin">(GMT+09:30) Darwin</option> -->
+                                <!-- <option timeZoneId="74" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="(GMT+10:00) Brisbane">(GMT+10:00) Brisbane</option> -->
+                                <!-- <option timeZoneId="75" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="(GMT+10:00) Canberra, Melbourne, Sydney">(GMT+10:00) Canberra, Melbourne, Sydney</option> -->
+                                <!-- <option timeZoneId="76" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="(GMT+10:00) Hobart">(GMT+10:00) Hobart</option> -->
+                                <!-- <option timeZoneId="77" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="(GMT+10:00) Guam, Port Moresby">(GMT+10:00) Guam, Port Moresby</option> -->
+                                <!-- <option timeZoneId="78" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="(GMT+10:00) Vladivostok">(GMT+10:00) Vladivostok</option> -->
+                                <!-- <option timeZoneId="79" gmtAdjustment="GMT+11:00" useDaylightTime="1" value="(GMT+11:00) Magadan, Solomon Is., New Caledonia">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option> -->
+                                <!-- <option timeZoneId="80" gmtAdjustment="GMT+12:00" useDaylightTime="1" value="(GMT+12:00) Auckland, Wellington">(GMT+12:00) Auckland, Wellington</option> -->
+                                <!-- <option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="(GMT+12:00) Fiji, Kamchatka, Marshall Is.">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option> -->
+                                <!-- <option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="(GMT+13:00) Nuku'alofa">(GMT+13:00) Nuku'alofa</option> -->
+
+                                <!-- </select> -->
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- <div class="row"> -->
+                                <!-- <div class="col-sm-12"> -->
+                                <!-- <div class="form-group"> -->
+                                <!-- <label for="Time_format">Time format </label> -->
+                                <!-- <select #Timeformat id="Time_format" name="Time_format " class="form-control"> -->
+                                <!-- <option selected value="{{TIME_FORMAT}}">{{TIME_FORMAT}}</option> -->
+                                <!-- <option disabled>Please select</option> -->
+                                <!-- <option value="24 hours">24 hours (hh:mm)</option> -->
+                                <!-- <option value="12 hours">12 hours (hh:mm a.m./p.m.)</option> -->
+                                <!-- </select> -->
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- </div> -->
+
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- </div> -->
+                            </div>
                             <div style="float: right;margin: auto;">
-                                <button class="btn btn-raised btn-info mr-1" type="button" id="Edit" onclick="
+                                <!--                                 <button class="btn btn-raised btn-info mr-1" type="button" id="Edit" onclick="
                                                                 event.preventDefault();
                                                                 $('#new_agency input, #new_agency select').prop('disabled', false);
                                                                 $('#company_name').prop('disabled', true);
                                                                 $('#company_name,#companycode').attr('disabled', 'disabled');">
                   <i class="fa fa-edit"></i> Edit
-                </button>
-                                <button class="btn btn-raised btn-primary" type="button" id="Save" (click)="UpdateProfile(street.value,city.value,postal_code.value,country.value,Full_name_legacy.value,VAT_number.value,IATA_number.value,Title.value,First_name.value,Middle_name.value,Last_name.value,Phone1.value,Phone2.value,Fax.value,WebSite.value,Email.value,Language.value,Priceformat.value,Dateformat.value,Timezone.value,Timeformat.value,Logo.value)">
-                  <i class="fa fa-check-square-o"></i> Save
-                </button>
+                </button> -->
+                                <button class="btn btn-raised btn-primary" type="button" id="Save">
+                <i class="fa fa-check-square-o"></i> Save
+            </button>
                             </div>
                         </div>
                     </div>

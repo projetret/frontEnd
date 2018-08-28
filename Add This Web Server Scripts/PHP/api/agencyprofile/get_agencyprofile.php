@@ -2,7 +2,8 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-header("Content-Type: application/json; charset=utf8");
+header("Content-Type: application/json; charset=utf8_bin");
+
 
 getUsers();
 
@@ -27,7 +28,7 @@ array_push($user,array(
 'CITY'=>$rs["CITY"],
 'POSTAL_CODE'=>$rs["POSTAL_CODE"],
 'COUNTRY'=>$rs["COUNTRY"],
-//'FULL_NAME_LEGACY'=>$rs["FULL_NAME_LEGACY"],
+'FULL_NAME_LEGACY'=>$rs["FULL_NAME_LEGACY"],
 'VAT_NUMBER'=>$rs["VAT_NUMBER"],
 'IATA_NUMBER'=>$rs["IATA_NUMBER"],
 'TITLE'=>$rs["TITLE"],
