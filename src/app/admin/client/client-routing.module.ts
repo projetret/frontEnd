@@ -8,31 +8,31 @@ import { PrivateclientComponent } from './privateclient/privateclient.component'
 const routes: Routes = [
   {
     path: 'Agencies',
-     component: AgenciesComponent,
+    component: AgenciesComponent,
     data: {
       title: 'Agencies'
-    },    
+    }
   },
   {
     path: 'Distributors',
-     component: DistributorsComponent,
+    component: DistributorsComponent,
     data: {
       title: 'Distributors'
-    },    
+    }
   },
   {
     path: 'CorporateClient',
-     component: CorporateclientsComponent,
+    component: CorporateclientsComponent,
     data: {
       title: 'CorporateClients'
-    },    
+    }
   },
   {
     path: 'Privateclient',
-     component: PrivateclientComponent,
+    component: PrivateclientComponent,
     data: {
       title: 'Privateclients'
-    },    
+    }
   }
 ];
 @NgModule({

@@ -8,34 +8,22 @@ getUsers();
 
 function getUsers(){
     $conn = new mysqli("localhost","root","toor","test");
-    $result = $conn->query("SELECT * FROM `client` WHERE `TYPE_CLIENT`='Agency'");
+    $result = $conn->query("SELECT * FROM agents");
 
     $user = array();
 
     while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
         array_push($user,array(
-
-'id'=>$rs["id"],
-'COMPANY'=>$rs["COMPANY"],
-'TRADE_REGISTER_NUMBER'=>$rs["TRADE_REGISTER_NUMBER"],
-'STREET'=>$rs["STREET"],
-'CITY'=>$rs["CITY"],
-'POSTAL_CODE'=>$rs["POSTAL_CODE"],
-'COUNTRY'=>$rs["COUNTRY"],
-'FULL_NAME'=>$rs["FULL_NAME"],
-'VAT_NUMBER'=>$rs["VAT_NUMBER"],
-'IATA_NUMBER'=>$rs["IATA_NUMBER"],
-'TITLE'=>$rs["TITLE"],
-'FIRST_NAME'=>$rs["FIRST_NAME"],
-'MIDDLE_NAME'=>$rs["MIDDLE_NAME"],
-'LAST_NAME'=>$rs["LAST_NAME"],
-'PHONE_1'=>$rs["PHONE_1"],
-'PHONE_2'=>$rs["PHONE_2"],
-'FAX'=>$rs["FAX"],
-'WEB_SITE'=>$rs["WEB_SITE"],
-'E_MAIL'=>$rs["E_MAIL"],
-'TYPE_CLIENT'=>$rs["TYPE_CLIENT"]));
- }
+        '_id'=>$rs["_id"],
+'Companycode'=>$rs["Companycode"],
+'Image'=>$rs["Image"],
+'Login'=>$rs["Login"],
+'Name'=>$rs["Name"],
+'Role'=>$rs["Role"],
+'Phone'=>$rs["Phone"],
+'Email'=>$rs["Email"],
+'Status'=>$rs["Status"]));
+    }
     $conn->close();
 
     $json = json_encode($user);
