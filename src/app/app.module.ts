@@ -16,7 +16,10 @@ import { AuthService } from './auth/auth.service';
 import { UserService } from './auth/user.service';
 import { AuthGuard } from './auth/auth.guard';
 import { MysqlService} from './admin/agency/users/mysql.service';
-import { MysqlagService} from './admin//client/agencies/ListAgencies/mysqlag.service';
+import { MysqlagService} from './admin/client/agencies/ListAgencies/mysqlag.service';
+import { MysqlCorService } from './admin/client/corporateclients/ListCorporate/mysqlCor.service';
+import { MysqlDistService } from './admin/client/distributors/ListDistributors/mysqlDist.service';
+import { MysqlPrivateService } from './admin/client/privateclient/ListPrivate/mysqlPrivate.service';
 import { AgencyMysqlService } from './admin/agency/agencyprofile/agencymysql.service';
 import {ClientMysqlService} from './admin/client/clientmysql.service';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -52,6 +55,9 @@ export const createTranslateLoader = (http: HttpClient) => {
     AgencyMysqlService,
     MysqlService,
     MysqlagService,
+    MysqlCorService,
+    MysqlDistService,
+    MysqlPrivateService,
     AuthService,
     UserService,
     AuthGuard
