@@ -1,0 +1,119 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Employee Entry Form : You can add an employee's detail information into this EMS Apps.</div>
+    <div class="panel-body">
+        <form class="form-horizontal" (submit)="updateAgency()">
+            <div class="form-group">
+                <label for="id" class="col-sm-2 control-label">id: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.id" name="id"> </div>
+            </div>
+            <div class="form-group">
+                <label for="COMPANY" class="col-sm-2 control-label">COMPANY: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.COMPANY" name="COMPANY">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="TRADE_REGISTER_NUMBER" class="col-sm-2 control-label">TRADE_REGISTER_NUMBER:
+                </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.TRADE_REGISTER_NUMBER" name="TRADE_REGISTER_NUMBER">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="STREET" class="col-sm-2 control-label">STREET: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.STREET" name="STREET">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="CITY" class="col-sm-2 control-label">CITY: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.CITY" name="CITY">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="POSTAL_CODE" class="col-sm-2 control-label">POSTAL_CODE: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.POSTAL_CODE" name="POSTAL_CODE">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="COUNTRY" class="col-sm-2 control-label">COUNTRY: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.COUNTRY" name="COUNTRY">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="FULL_NAME" class="col-sm-2 control-label">FULL_NAME: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.FULL_NAME" name="FULL_NAME">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="VAT_NUMBER" class="col-sm-2 control-label">VAT_NUMBER: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.VAT_NUMBER" name="VAT_NUMBER">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="IATA_NUMBER" class="col-sm-2 control-label">IATA_NUMBER: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.IATA_NUMBER" name="IATA_NUMBER">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="TITLE" class="col-sm-2 control-label">TITLE: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.TITLE" name="TITLE">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="FIRST_NAME" class="col-sm-2 control-label">FIRST_NAME: </label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" [(ngModel)]="model.FIRST_NAME" name="FIRST_NAME">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="MIDDLE_NAME" class="col-sm-2 control-label">MIDDLE_NAME: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.MIDDLE_NAME" name="MIDDLE_NAME">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="LAST_NAME" class="col-sm-2 control-label">LAST_NAME: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.LAST_NAME" name="LAST_NAME">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="PHONE_1" class="col-sm-2 control-label">PHONE_1: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.PHONE_1" name="PHONE_1">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="PHONE_2" class="col-sm-2 control-label">PHONE_2: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.PHONE_2" name="PHONE_2">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="FAX" class="col-sm-2 control-label">FAX: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.FAX" name="FAX"> </div>
+            </div>
+            <div class="form-group">
+                <label for="WEB_SITE" class="col-sm-2 control-label">WEB_SITE: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.WEB_SITE" name="WEB_SITE">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="E_MAIL" class="col-sm-2 control-label">E_MAIL: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.E_MAIL" name="E_MAIL">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="TYPE_CLIENT" class="col-sm-2 control-label">TYPE_CLIENT: </label>
+                <div class="col-sm-9"><input type="text" class="form-control" [(ngModel)]="model.TYPE_CLIENT" name="TYPE_CLIENT">
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <button type="submit" class="btn btn-success">Update</button>
+                    <a class="btn btn-info" (click)="goBack()">Cancel</a>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+</div>

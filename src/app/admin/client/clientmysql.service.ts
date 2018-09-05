@@ -235,64 +235,6 @@ export class ClientMysqlService {
         console.log(res.toString());
       });
   }
-
-  // tslint:disable-next-line:max-line-length
- /*  public addMysqlUserDatas(
-    COMPANY: string,
-    TRADE_REGISTER_NUMBER: number,
-    STREET: string,
-    CITY: string,
-    POSTAL_CODE: number,
-    COUNTRY: string,
-    FULL_NAME: string,
-    VAT_NUMBER: string,
-    IATA_NUMBER: number,
-    TITLE: string,
-    FIRST_NAME: string,
-    MIDDLE_NAME: string,
-    LAST_NAME: string,
-    PHONE_1: number,
-    PHONE_2: number,
-    FAX: number,
-    WEB_SITE: string,
-    E_MAIL: string,
-    TYPE_CLIENT: string
-  ) {
-    const url = 'http://localhost/api/client/post_clients.php';
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    return this._http
-      .post(
-        url,
-        // tslint:disable-next-line:max-line-length
-        {
-          COMPANY: COMPANY,
-          TRADE_REGISTER_NUMBER: TRADE_REGISTER_NUMBER,
-          STREET: STREET,
-          CITY: CITY,
-          POSTAL_CODE: POSTAL_CODE,
-          COUNTRY: COUNTRY,
-          FULL_NAME: FULL_NAME,
-          VAT_NUMBER: VAT_NUMBER,
-          IATA_NUMBER: IATA_NUMBER,
-          TITLE: TITLE,
-          FIRST_NAME: FIRST_NAME,
-          MIDDLE_NAME: MIDDLE_NAME,
-          LAST_NAME: LAST_NAME,
-          PHONE_1: PHONE_1,
-          PHONE_2: PHONE_2,
-          FAX: FAX,
-          WEB_SITE: WEB_SITE,
-          E_MAIL: E_MAIL,
-          TYPE_CLIENT: TYPE_CLIENT
-        },
-        { headers: headers }
-      )
-      .map((res: Response) => res.text())
-      .subscribe(res => {
-        console.log(res.toString());
-      });
-  } */
   public UpdateMysqlUserDatas(
     _COMPANY: string,
     _TRADE_REGISTER_NUMBER: number,

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from './user';
 import { MysqlagService } from './mysqlag.service';
 
+
 @Component({
   moduleId: module.id,
   selector: 'app-ListAgencies',
@@ -22,5 +23,12 @@ export class ListAgenciesComponent implements OnInit {
         res => (this.usersMysql = res),
         err => console.error(err.status)
       );
+  }
+  deleteAgency(id) {
+    this._mysqlService
+      .deleteAgency(id)
+      .subscribe(() => {
+        this.getUsersMysql();
+      });
   }
 }

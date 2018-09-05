@@ -6,44 +6,34 @@ import 'rxjs/add/operator/do';
 
 @Injectable()
 export class MysqlagService {
+  Agencies = [];
   constructor(public _http: Http) {}
-
- /*  public addMysqlUserDatas(_firstname: string, _lastname: string) {
-    const url = 'http://localhost/api/users/post_users.php';
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    return this._http
-      .post(
-        url,
-        { id: '', firstname: _firstname, lastname: _lastname },
-        { headers: headers }
-      )
-      .map((res: Response) => res.text())
-      .subscribe(res => {
-        console.log(res.toString());
-      });
-  } */
-
+  checkMe: any;
   public getMysqlUsersDatas() {
-    return (
-      this._http
-        .get('http://localhost/api/client/get_clients.php')
-        /*.do(x => console.log(x))**/
-        .map(rep => rep.json())
-    );
-  }
-
-/*   public getLocalUsersDatas() {
     return this._http
-      .get('./assets/users.json')
-      .do(x => console.log(x))
-      .map(rep => rep.json());
-  }
+      .get('http://localhost/api/client/get_clients.php')
+      .map(res => {
+        this.checkMe = res;
 
-  public getLocalTextDatas() {
+        if (this.checkMe._body !== '0') {
+          return res.json();
+        }
+      });
+  }
+  getAgency(id) {
     return this._http
-      .get('./assets/read.txt')
-      .do(x => console.log(x))
-      .map(rep => rep.text());
-  } */
+      .post('http://localhost/api/client/selectoneagency.php/', { id: id })
+      .map(res => res.json());
+  }
+  deleteAgency(id) {
+    window.alert('Are you sure');
+    return this._http
+      .post('http://localhost/api/client/deleteagency.php/', { id: id })
+      .map(() => this.getMysqlUsersDatas());
+  }
+  updateAgency(info) {
+    return this._http
+      .post('http://localhost/api/client/update.php/', info)
+      .map(() => '');
+  }
 }

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthModule } from './auth/auth.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -22,7 +22,6 @@ import { MysqlDistService } from './admin/client/distributors/ListDistributors/m
 import { MysqlPrivateService } from './admin/client/privateclient/ListPrivate/mysqlPrivate.service';
 import { AgencyMysqlService } from './admin/agency/agencyprofile/agencymysql.service';
 import {ClientMysqlService} from './admin/client/clientmysql.service';
-import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import * as $ from 'jquery';
 export const createTranslateLoader = (http: HttpClient) => {

@@ -8,7 +8,7 @@ getUsers();
 
 function getUsers(){
     $conn = new mysqli("localhost","root","toor","test");
-    $result = $conn->query("SELECT * FROM `client` WHERE `TYPE_CLIENT`='Agency'");
+    $result = $conn->query("SELECT * FROM `client` WHERE `TYPE_CLIENT`='Agency' ORDER BY id DESC");
 
     $user = array();
 

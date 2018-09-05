@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { ListAgenciesRoutingModule } from './ListAgencies-routing.module';
 import { ListAgenciesComponent } from './ListAgencies.component';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -9,8 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     HttpModule,
     HttpClientModule,
-    CommonModule,
-    ListAgenciesRoutingModule
+    CommonModule
   ],
 
   declarations: [ListAgenciesComponent]
